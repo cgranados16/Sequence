@@ -1,0 +1,723 @@
+# depslib dependency file v1.0
+1385316878 source:c:\users\curso\desktop\ed_laboratorio#3\ed_laboratorio#3\main.cpp
+	<iostream>
+
+1471137032 source:c:\users\carlo\desktop\ed_laboratorio#3\main.cpp
+	<iostream>
+	"CircleList.h"
+	"DCircleList.h"
+
+1471134988 source:c:\users\carlo\desktop\ed_laboratorio#3\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1471026428 c:\users\carlo\desktop\ed_laboratorio#3\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1471136885 c:\users\carlo\desktop\ed_laboratorio#3\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1470794068 c:\users\carlo\desktop\ed_laboratorio#3\include\node.h
+	<cstddef>
+
+1470806510 c:\users\carlo\desktop\ed_laboratorio#3\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1470879080 source:c:\users\carlo\desktop\ed_laboratorio#3\src\dnode.cpp
+	"DNode.h"
+
+1471136885 source:c:\users\carlo\desktop\ed_laboratorio#3\src\linkedlist.cpp
+	"LinkedList.h"
+	<stdexcept>
+	<iostream>
+
+1470841004 source:c:\users\carlo\desktop\ed_laboratorio#3\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1470881118 source:e:\estructuras de datos\ed_laboratorio#3\main.cpp
+	<iostream>
+	"DLinkedList.h"
+	"DNode.h"
+
+1470880548 e:\estructuras de datos\ed_laboratorio#3\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1470806234 e:\estructuras de datos\ed_laboratorio#3\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1470794068 e:\estructuras de datos\ed_laboratorio#3\include\node.h
+	<cstddef>
+
+1470806510 e:\estructuras de datos\ed_laboratorio#3\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1470880548 source:e:\estructuras de datos\ed_laboratorio#3\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1470879080 source:e:\estructuras de datos\ed_laboratorio#3\src\dnode.cpp
+	"DNode.h"
+
+1470801092 source:e:\estructuras de datos\ed_laboratorio#3\src\linkedlist.cpp
+	"LinkedList.h"
+	<stdexcept>
+	<iostream>
+
+1470841004 source:e:\estructuras de datos\ed_laboratorio#3\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1471048698 source:c:\users\carlo\desktop\ed_laboratorio#3\src\circlelist.cpp
+	"CircleList.h"
+
+1471048675 c:\users\carlo\desktop\ed_laboratorio#3\include\circlelist.h
+	"LinkedList.h"
+
+1471134988 source:c:\users\carlo\desktop\ed_laboratorio#3\src\dcirclelist.cpp
+	"DCircleList.h"
+
+1471041046 c:\users\carlo\desktop\ed_laboratorio#3\include\dcirclelist.h
+	"DLinkedList.h"
+
+1471138130 source:c:\users\carlo\desktop\ed_laboratorio#4\main.cpp
+	<iostream>
+	"CircleList.h"
+	"DCircleList.h"
+
+1471137745 c:\users\carlo\desktop\ed_laboratorio#4\include\circlelist.h
+	"LinkedList.h"
+
+1471136885 c:\users\carlo\desktop\ed_laboratorio#4\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1470794068 c:\users\carlo\desktop\ed_laboratorio#4\include\node.h
+	<cstddef>
+
+1471137745 c:\users\carlo\desktop\ed_laboratorio#4\include\dcirclelist.h
+	"DLinkedList.h"
+
+1471026428 c:\users\carlo\desktop\ed_laboratorio#4\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1470806510 c:\users\carlo\desktop\ed_laboratorio#4\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1471138834 source:c:\users\carlo\desktop\ed_laboratorio#4\src\circlelist.cpp
+	"CircleList.h"
+
+1471137522 source:c:\users\carlo\desktop\ed_laboratorio#4\src\dcirclelist.cpp
+	"DCircleList.h"
+
+1471137402 source:c:\users\carlo\desktop\ed_laboratorio#4\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1470879080 source:c:\users\carlo\desktop\ed_laboratorio#4\src\dnode.cpp
+	"DNode.h"
+
+1471136885 source:c:\users\carlo\desktop\ed_laboratorio#4\src\linkedlist.cpp
+	"LinkedList.h"
+	<stdexcept>
+	<iostream>
+
+1470841004 source:c:\users\carlo\desktop\ed_laboratorio#4\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1471477807 source:c:\users\carlo\desktop\a\ed_laboratorio#4\main.cpp
+	<iostream>
+	"CircleList.h"
+	"DCircleList.h"
+	"LinkedQueue.h"
+	"ArrayQueue.h"
+
+1471471435 c:\users\carlo\desktop\a\ed_laboratorio#4\include\circlelist.h
+	"LinkedList.h"
+
+1471471435 c:\users\carlo\desktop\a\ed_laboratorio#4\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1471471435 c:\users\carlo\desktop\a\ed_laboratorio#4\include\node.h
+	<cstddef>
+
+1471471435 c:\users\carlo\desktop\a\ed_laboratorio#4\include\dcirclelist.h
+	"DLinkedList.h"
+
+1471471435 c:\users\carlo\desktop\a\ed_laboratorio#4\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1471471435 c:\users\carlo\desktop\a\ed_laboratorio#4\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1471471435 source:c:\users\carlo\desktop\a\ed_laboratorio#4\src\circlelist.cpp
+	"CircleList.h"
+
+1471471435 source:c:\users\carlo\desktop\a\ed_laboratorio#4\src\dcirclelist.cpp
+	"DCircleList.h"
+
+1471471435 source:c:\users\carlo\desktop\a\ed_laboratorio#4\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1471471435 source:c:\users\carlo\desktop\a\ed_laboratorio#4\src\dnode.cpp
+	"DNode.h"
+
+1471471435 source:c:\users\carlo\desktop\a\ed_laboratorio#4\src\linkedlist.cpp
+	"LinkedList.h"
+	<stdexcept>
+	<iostream>
+
+1471471435 source:c:\users\carlo\desktop\a\ed_laboratorio#4\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1471473475 source:c:\users\carlo\desktop\a\ed_laboratorio#4\src\linkedqueue.cpp
+	"LinkedQueue.h"
+
+1471473475 c:\users\carlo\desktop\a\ed_laboratorio#4\include\linkedqueue.h
+	"LinkedList.h"
+
+1471476988 source:c:\users\carlo\desktop\a\ed_laboratorio#4\src\arraylist.cpp
+	"ArrayList.h"
+	<iostream>
+	<stdexcept>
+
+1471475411 c:\users\carlo\desktop\a\ed_laboratorio#4\include\arraylist.h
+
+1471477639 source:c:\users\carlo\desktop\a\ed_laboratorio#4\src\arrayqueue.cpp
+	"ArrayQueue.h"
+	<iostream>
+	<stdexcept>
+
+1471476777 c:\users\carlo\desktop\a\ed_laboratorio#4\include\arrayqueue.h
+	"ArrayList.h"
+
+1471477807 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\main.cpp
+	<iostream>
+	"CircleList.h"
+	"DCircleList.h"
+	"LinkedQueue.h"
+	"ArrayQueue.h"
+
+1471471435 c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\include\circlelist.h
+	"LinkedList.h"
+
+1471471435 c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1471471435 c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\include\node.h
+	<cstddef>
+
+1471471435 c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\include\dcirclelist.h
+	"DLinkedList.h"
+
+1471471435 c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1471471435 c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1471473475 c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\include\linkedqueue.h
+	"LinkedList.h"
+
+1471476777 c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\include\arrayqueue.h
+	"ArrayList.h"
+
+1471475411 c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\include\arraylist.h
+
+1471476988 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\src\arraylist.cpp
+	"ArrayList.h"
+	<iostream>
+	<stdexcept>
+
+1471477639 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\src\arrayqueue.cpp
+	"ArrayQueue.h"
+	<iostream>
+	<stdexcept>
+
+1471471435 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\src\circlelist.cpp
+	"CircleList.h"
+
+1471471435 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\src\dcirclelist.cpp
+	"DCircleList.h"
+
+1471471435 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1471471435 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\src\dnode.cpp
+	"DNode.h"
+
+1471471435 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\src\linkedlist.cpp
+	"LinkedList.h"
+	<stdexcept>
+	<iostream>
+
+1471473475 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\src\linkedqueue.cpp
+	"LinkedQueue.h"
+
+1471471435 source:c:\users\carlo\desktop\ed_laboratorio#5\ed_laboratorio#5\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1471746642 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\main.cpp
+	<iostream>
+	"ArrayStack.h"
+	"LinkedStack.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\circlelist.h
+	"LinkedList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1471745485 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\node.h
+	<cstddef>
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\dcirclelist.h
+	"DLinkedList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1471744310 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\linkedqueue.h
+	"LinkedList.h"
+
+1471741890 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\arrayqueue.h
+	"ArrayList.h"
+
+1471742771 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\arraylist.h
+
+1471743018 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\arraylist.cpp
+	"ArrayList.h"
+	<iostream>
+	<stdexcept>
+
+1471741700 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\arrayqueue.cpp
+	"ArrayQueue.h"
+	<iostream>
+	<stdexcept>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\circlelist.cpp
+	"CircleList.h"
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\dcirclelist.cpp
+	"DCircleList.h"
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\dnode.cpp
+	"DNode.h"
+
+1471745650 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\linkedlist.cpp
+	"LinkedList.h"
+	<stdexcept>
+	<iostream>
+
+1471744310 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\linkedqueue.cpp
+	"LinkedQueue.h"
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1471743304 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\arraystack.cpp
+	"ArrayStack.h"
+
+1471746821 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\arraystack.h
+	"ArrayList.h"
+
+1471746887 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\src\linkedstack.cpp
+	"LinkedStack.h"
+	<iostream>
+	<stdexcept>
+
+1471746794 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\ed_laboratorio#5\include\linkedstack.h
+	"LinkedList.h"
+
+1471762922 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\main.cpp
+	<iostream>
+	"ArrayStack.h"
+	"LinkedStack.h"
+
+1471746821 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\arraystack.h
+	"ArrayList.h"
+
+1471742771 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\arraylist.h
+
+1471762952 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\linkedstack.h
+	"LinkedList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1471745485 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\node.h
+	<cstddef>
+
+1471762284 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\arraylist.cpp
+	"ArrayList.h"
+	<iostream>
+	<stdexcept>
+
+1471741700 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\arrayqueue.cpp
+	"ArrayQueue.h"
+	<iostream>
+	<stdexcept>
+
+1471741890 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\arrayqueue.h
+	"ArrayList.h"
+
+1471762612 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\arraystack.cpp
+	"ArrayStack.h"
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\circlelist.cpp
+	"CircleList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\circlelist.h
+	"LinkedList.h"
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\dcirclelist.cpp
+	"DCircleList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\dcirclelist.h
+	"DLinkedList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\dnode.cpp
+	"DNode.h"
+
+1471745650 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\linkedlist.cpp
+	"LinkedList.h"
+	<stdexcept>
+	<iostream>
+
+1471744310 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\linkedqueue.cpp
+	"LinkedQueue.h"
+
+1471744310 c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\include\linkedqueue.h
+	"LinkedList.h"
+
+1471761095 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\linkedstack.cpp
+	"LinkedStack.h"
+	<iostream>
+	<stdexcept>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio_5\ed_laboratorio#5\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1471842374 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\main.cpp
+	<iostream>
+	"ArrayStack.h"
+	"LinkedStack.h"
+
+1471746821 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\arraystack.h
+	"ArrayList.h"
+
+1471742771 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\arraylist.h
+
+1471762952 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\linkedstack.h
+	"LinkedList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1471745485 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\node.h
+	<cstddef>
+
+1471762284 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\arraylist.cpp
+	"ArrayList.h"
+	<iostream>
+	<stdexcept>
+
+1471741700 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\arrayqueue.cpp
+	"ArrayQueue.h"
+	<iostream>
+	<stdexcept>
+
+1471741890 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\arrayqueue.h
+	"ArrayList.h"
+
+1471841266 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\arraystack.cpp
+	"ArrayStack.h"
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\circlelist.cpp
+	"CircleList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\circlelist.h
+	"LinkedList.h"
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\dcirclelist.cpp
+	"DCircleList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\dcirclelist.h
+	"DLinkedList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\dnode.cpp
+	"DNode.h"
+
+1471745650 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\linkedlist.cpp
+	"LinkedList.h"
+	<stdexcept>
+	<iostream>
+
+1471744310 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\linkedqueue.cpp
+	"LinkedQueue.h"
+
+1471744310 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\include\linkedqueue.h
+	"LinkedList.h"
+
+1471761095 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\linkedstack.cpp
+	"LinkedStack.h"
+	<iostream>
+	<stdexcept>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#5\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1472185698 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\main.cpp
+	<iostream>
+	"ArrayStack.h"
+	"LinkedStack.h"
+
+1471746821 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\arraystack.h
+	"ArrayList.h"
+
+1472184554 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\arraylist.h
+
+1471762952 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\linkedstack.h
+	"LinkedList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1471745485 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\node.h
+	<cstddef>
+
+1472185588 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\arraylist.cpp
+	"ArrayList.h"
+	<iostream>
+	<stdexcept>
+
+1471741700 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\arrayqueue.cpp
+	"ArrayQueue.h"
+	<iostream>
+	<stdexcept>
+
+1471741890 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\arrayqueue.h
+	"ArrayList.h"
+
+1471860789 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\arraystack.cpp
+	"ArrayStack.h"
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\circlelist.cpp
+	"CircleList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\circlelist.h
+	"LinkedList.h"
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\dcirclelist.cpp
+	"DCircleList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\dcirclelist.h
+	"DLinkedList.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1471737617 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\dnode.cpp
+	"DNode.h"
+
+1471745650 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\linkedlist.cpp
+	"LinkedList.h"
+	<stdexcept>
+	<iostream>
+
+1471744310 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\linkedqueue.cpp
+	"LinkedQueue.h"
+
+1471744310 c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\include\linkedqueue.h
+	"LinkedList.h"
+
+1471761095 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\linkedstack.cpp
+	"LinkedStack.h"
+	<iostream>
+	<stdexcept>
+
+1471737617 source:c:\users\carlo\desktop\ed_laboratorio#6\ed_laboratorio#6\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1472440096 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\arraylist.cpp
+	"ArrayList.h"
+	"Card.h"
+	<iostream>
+	<stdexcept>
+
+1472440094 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\arraylist.h
+
+1471741700 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\arrayqueue.cpp
+	"ArrayQueue.h"
+	<iostream>
+	<stdexcept>
+
+1471741890 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\arrayqueue.h
+	"ArrayList.h"
+
+1472449533 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\arraystack.cpp
+	"ArrayStack.h"
+	"Card.h"
+
+1472449533 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\arraystack.h
+	"ArrayList.h"
+
+1472441571 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\circlelist.cpp
+	"CircleList.h"
+	"Player.h"
+	<stdexcept>
+
+1472441311 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\circlelist.h
+	"LinkedList.h"
+
+1472440145 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1472338404 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\node.h
+	<cstddef>
+
+1471737617 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\dcirclelist.cpp
+	"DCircleList.h"
+
+1471737617 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\dcirclelist.h
+	"DLinkedList.h"
+
+1471737617 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1471737617 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1471737617 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\dlinkedlist.cpp
+	"DLinkedList.h"
+	<iostream>
+
+1471737617 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\dnode.cpp
+	"DNode.h"
+
+1472447628 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\linkedlist.cpp
+	"LinkedList.h"
+	"Player.h"
+	<stdexcept>
+	<iostream>
+
+1471744310 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\linkedqueue.cpp
+	"LinkedQueue.h"
+
+1471744310 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\linkedqueue.h
+	"LinkedList.h"
+
+1471761095 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\linkedstack.cpp
+	"LinkedStack.h"
+	<iostream>
+	<stdexcept>
+
+1471762952 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\linkedstack.h
+	"LinkedList.h"
+
+1472438769 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\node.cpp
+	"Node.h"
+	"Player.h"
+	<iostream>
+	<stdexcept>
+
+1472450049 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\main.cpp
+	<iostream>
+	"ArrayStack.h"
+	"Card.h"
+	"CircleList.h"
+	"Player.h"
+	"LinkedList.h"
+
+1472449819 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\card.h
+	<iostream>
+	"Player.h"
+
+1472449826 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\card.cpp
+	"Card.h"
+	<iostream>
+	<stdexcept>
+	<string>
+	<sstream>
+
+1472448294 c:\users\carlo\desktop\sequence\ed_laboratorio#6\include\player.h
+	<iostream>
+	"Card.h"
+	"ArrayList.h"
+
+1472448069 source:c:\users\carlo\desktop\sequence\ed_laboratorio#6\src\player.cpp
+	"Player.h"
+	<iostream>
+
