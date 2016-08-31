@@ -16,6 +16,8 @@ class Card
         int getValue();
         void setValue(int value);
         void toString();
+        void setId(int id);
+        int getId();
         void setPlayer(string player);
         string getPlayer();
 
@@ -24,6 +26,7 @@ class Card
     private:
         string type;
         int value;
+        int id;
         string player;
 };
 

@@ -116,6 +116,18 @@ void ArrayList<E>::insertionSort(){
 }
 */
 
+template<typename E>
+int ArrayList<E>::secuencial(int value){
+    gotoStart();
+    while (pos<size){
+        E actual=getValue();
+        if (actual.getId()==value){
+            return pos;
+        }
+        pos++;
+    }
+    return -1;
+}
 
 
 template<typename E>

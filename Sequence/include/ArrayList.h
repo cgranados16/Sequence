@@ -1,5 +1,6 @@
 #ifndef ARRAYLIST_H
 #define ARRAYLIST_H
+#include "Card.h"
 using namespace std;
 template<typename E>
 
@@ -18,6 +19,7 @@ class ArrayList
         void append(E pElement);
         void insert(E pElement);
         E remove();
+        int secuencial(int value);
         virtual ~ArrayList();
         void insertionSort();
 

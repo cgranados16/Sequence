@@ -28,6 +28,7 @@ void Card::setValue(int value){
     }
     this->value = value;
 }
+
 void Card::toString(){
     if (value==1 || value>10){
         string name;
@@ -47,8 +48,20 @@ void Card::toString(){
     }
 }
 
+void Card::setId(int id){
+    this->id = id;
+}
+int Card::getId(){
+    return id;
+}
+
+
 void Card::setPlayer(string player){
     this->player = player;
+}
+
+string Card::getPlayer(){
+    return player;
 }
 
 Card::~Card(){

@@ -721,3 +721,76 @@
 	"Player.h"
 	<iostream>
 
+1472624316 source:c:\users\carlo\desktop\sequence\sequence\src\arraylist.cpp
+	"ArrayList.h"
+	"Card.h"
+	<iostream>
+	<stdexcept>
+
+1472624316 c:\users\carlo\desktop\sequence\sequence\include\arraylist.h
+	"Card.h"
+
+1472618599 c:\users\carlo\desktop\sequence\sequence\include\card.h
+	<iostream>
+	"Player.h"
+
+1472448294 c:\users\carlo\desktop\sequence\sequence\include\player.h
+	<iostream>
+	"Card.h"
+	"ArrayList.h"
+
+1472449533 source:c:\users\carlo\desktop\sequence\sequence\src\arraystack.cpp
+	"ArrayStack.h"
+	"Card.h"
+
+1472449533 c:\users\carlo\desktop\sequence\sequence\include\arraystack.h
+	"ArrayList.h"
+
+1472618823 source:c:\users\carlo\desktop\sequence\sequence\src\card.cpp
+	"Card.h"
+	<iostream>
+	<stdexcept>
+	<string>
+	<sstream>
+
+1472621643 source:c:\users\carlo\desktop\sequence\sequence\src\circlelist.cpp
+	"CircleList.h"
+	"Player.h"
+	<stdexcept>
+
+1472441311 c:\users\carlo\desktop\sequence\sequence\include\circlelist.h
+	"LinkedList.h"
+
+1472440145 c:\users\carlo\desktop\sequence\sequence\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1472338404 c:\users\carlo\desktop\sequence\sequence\include\node.h
+	<cstddef>
+
+1472447628 source:c:\users\carlo\desktop\sequence\sequence\src\linkedlist.cpp
+	"LinkedList.h"
+	"Player.h"
+	<stdexcept>
+	<iostream>
+
+1472438769 source:c:\users\carlo\desktop\sequence\sequence\src\node.cpp
+	"Node.h"
+	"Player.h"
+	<iostream>
+	<stdexcept>
+
+1472448069 source:c:\users\carlo\desktop\sequence\sequence\src\player.cpp
+	"Player.h"
+	<iostream>
+
+1472623566 source:c:\users\carlo\desktop\sequence\sequence\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"ArrayStack.h"
+	"Card.h"
+	"CircleList.h"
+	"Player.h"
+	"LinkedList.h"
+
