@@ -1,0 +1,188 @@
+# depslib dependency file v1.0
+1472340224 source:f:\sequence\ed_laboratorio#6\main.cpp
+	<iostream>
+	"ArrayStack.h"
+	"ArrayList.h"
+	"LinkedStack.h"
+	"CircleList.h"
+	"Card.h"
+	"Player.h"
+
+1472281764 f:\sequence\ed_laboratorio#6\include\arraystack.h
+	"ArrayList.h"
+
+1472334608 f:\sequence\ed_laboratorio#6\include\arraylist.h
+
+1472337226 f:\sequence\ed_laboratorio#6\include\linkedstack.h
+	"LinkedList.h"
+
+1472337870 f:\sequence\ed_laboratorio#6\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1472338404 f:\sequence\ed_laboratorio#6\include\node.h
+	<cstddef>
+
+1472333988 f:\sequence\ed_laboratorio#6\include\card.h
+	<iostream>
+
+1472334608 source:f:\sequence\ed_laboratorio#6\src\arraylist.cpp
+	"ArrayList.h"
+	"Card.h"
+	<iostream>
+	<stdexcept>
+
+1472333292 source:f:\sequence\ed_laboratorio#6\src\arrayqueue.cpp
+	<iostream>
+	<stdexcept>
+	"ArrayList.h"
+
+1472333316 source:f:\sequence\ed_laboratorio#6\src\arraystack.cpp
+
+1472338318 source:f:\sequence\ed_laboratorio#6\src\circlelist.cpp
+	"CircleList.h"
+	"Player.h"
+
+1472338318 f:\sequence\ed_laboratorio#6\include\circlelist.h
+	"LinkedList.h"
+
+1472337586 source:f:\sequence\ed_laboratorio#6\src\dcirclelist.cpp
+
+1472337536 f:\sequence\ed_laboratorio#6\include\dcirclelist.h
+	"DLinkedList.h"
+
+1472337528 f:\sequence\ed_laboratorio#6\include\dlinkedlist.h
+	"LinkedList.h"
+	"DNode.h"
+
+1472337512 f:\sequence\ed_laboratorio#6\include\dnode.h
+	"Node.h"
+	<cstddef>
+
+1472337602 source:f:\sequence\ed_laboratorio#6\src\dlinkedlist.cpp
+	<iostream>
+
+1472337614 source:f:\sequence\ed_laboratorio#6\src\dnode.cpp
+
+1472338356 source:f:\sequence\ed_laboratorio#6\src\linkedlist.cpp
+	"LinkedList.h"
+	"Player.h"
+	<stdexcept>
+	<iostream>
+
+1472337906 source:f:\sequence\ed_laboratorio#6\src\linkedqueue.cpp
+	"LinkedQueue.h"
+
+1472337896 f:\sequence\ed_laboratorio#6\include\linkedqueue.h
+	"LinkedList.h"
+
+1472337920 source:f:\sequence\ed_laboratorio#6\src\linkedstack.cpp
+	"LinkedStack.h"
+	<iostream>
+	<stdexcept>
+
+1472338574 source:f:\sequence\ed_laboratorio#6\src\node.cpp
+	"Node.h"
+	"Player.h"
+	<iostream>
+	<stdexcept>
+
+1472336632 source:f:\sequence\ed_laboratorio#6\src\card.cpp
+	"Card.h"
+	<iostream>
+	<stdexcept>
+	<string>
+	<sstream>
+
+1472336482 source:f:\sequence\ed_laboratorio#6\src\players.cpp
+	"Players.h"
+
+1472336598 f:\sequence\ed_laboratorio#6\include\players.h
+	<iostream>
+
+1472338942 f:\sequence\ed_laboratorio#6\include\player.h
+	<iostream>
+
+1472338942 source:f:\sequence\ed_laboratorio#6\src\player.cpp
+	"Player.h"
+	<iostream>
+
+1472334608 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\arraylist.cpp
+	"ArrayList.h"
+	"Card.h"
+	<iostream>
+	<stdexcept>
+
+1472334608 c:\users\ma\desktop\sequence\ed_laboratorio#6\include\arraylist.h
+
+1472333988 c:\users\ma\desktop\sequence\ed_laboratorio#6\include\card.h
+	<iostream>
+
+1472333292 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\arrayqueue.cpp
+	<iostream>
+	<stdexcept>
+	"ArrayList.h"
+
+1472333316 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\arraystack.cpp
+
+1472336632 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\card.cpp
+	"Card.h"
+	<iostream>
+	<stdexcept>
+	<string>
+	<sstream>
+
+1472338318 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\circlelist.cpp
+	"CircleList.h"
+	"Player.h"
+
+1472338318 c:\users\ma\desktop\sequence\ed_laboratorio#6\include\circlelist.h
+	"LinkedList.h"
+
+1472337870 c:\users\ma\desktop\sequence\ed_laboratorio#6\include\linkedlist.h
+	"Node.h"
+	<cstddef>
+
+1472338404 c:\users\ma\desktop\sequence\ed_laboratorio#6\include\node.h
+	<cstddef>
+
+1472338942 c:\users\ma\desktop\sequence\ed_laboratorio#6\include\player.h
+	<iostream>
+
+1472337586 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\dcirclelist.cpp
+
+1472337602 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\dlinkedlist.cpp
+	<iostream>
+
+1472337614 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\dnode.cpp
+
+1472338356 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\linkedlist.cpp
+	"LinkedList.h"
+	"Player.h"
+	<stdexcept>
+	<iostream>
+
+1472337906 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\linkedqueue.cpp
+	"LinkedQueue.h"
+
+1472337896 c:\users\ma\desktop\sequence\ed_laboratorio#6\include\linkedqueue.h
+	"LinkedList.h"
+
+1472337920 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\linkedstack.cpp
+	"LinkedStack.h"
+	<iostream>
+	<stdexcept>
+
+1472337226 c:\users\ma\desktop\sequence\ed_laboratorio#6\include\linkedstack.h
+	"LinkedList.h"
+
+1472340478 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\node.cpp
+	"Node.h"
+	"Player.h"
+	<iostream>
+	<stdexcept>
+
+1472338942 source:c:\users\ma\desktop\sequence\ed_laboratorio#6\src\player.cpp
+	"Player.h"
+	<iostream>
+
