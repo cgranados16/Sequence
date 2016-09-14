@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+RC_FILE = myapp.rc
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,33 +13,34 @@ TARGET = Sequence
 TEMPLATE = app
 
 
+
 SOURCES += main.cpp \
     ArrayList.cpp \
     ArrayStack.cpp \
-    button.cpp \
+    Button.cpp \
     Card.cpp \
-    cardbutton.cpp \
+    CardButton.cpp \
     CircleList.cpp \
-    control.cpp \
-    game.cpp \
     LinkedList.cpp \
     Node.cpp \
     Player.cpp \
-    rectangulo.cpp
+    Control.cpp \
+    Game.cpp \
+    CardDeck.cpp
 
 HEADERS  += \
     ArrayList.h \
     ArrayStack.h \
-    button.h \
     Card.h \
-    cardbutton.h \
+    CardButton.h \
     CircleList.h \
-    control.h \
-    game.h \
     LinkedList.h \
     Node.h \
     Player.h \
-    rectangulo.h
+    Game.h \
+    Control.h \
+    Button.h \
+    CardDeck.h
 
 RESOURCES += \
     resources.qrc

@@ -12,7 +12,7 @@ class ArrayList
         int getPos();
         int getSize();
         void gotoStart();
-        void gotoPos(int pos);
+        void gotoPos(int pos = NULL);
         void gotoEnd();
         void previous();
         void next();

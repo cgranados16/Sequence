@@ -1,17 +1,26 @@
-#include "game.h"
+#include "Game.h"
 #include "Card.h"
 #include "CircleList.h"
 #include "ArrayStack.h"
 #include <ctime>
 #include <QDebug>
+#include "CardDeck.h"
 
 extern CircleList<Player> Jugadores;
+extern ArrayList<Card> CardsDeck;
+extern QFont myFont;
+extern int playersNum;
 
 Game::Game()
 {
+    //========================
+    round = 0;
+    HandButtons = new ArrayList<CardButton*>(70);
+
+    //==========================
     this->scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, 1360, 700);
-    scene->setBackgroundBrush(Qt::gray); // cambia el color de fondo de la pantalla
+    setBackgroundBrush(QBrush(QImage(":/Buttons/Resources/boardBackground.jpg"))); // agregar imagen de fondo
 
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff); // no crear scroll horizontal
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff); // no crear scroll vertical
@@ -20,144 +29,113 @@ Game::Game()
     setScene(this->scene); // cambia la escena por defecto a la que se eta creando
 
 
-    Player actual = Jugadores.getElement();
-    string actualName = actual.getName();
-    QString text = ("Turno de: "+ QString::fromStdString(actualName));
-    QGraphicsTextItem* item2 = new QGraphicsTextItem(text);
-    item2->setDefaultTextColor(Qt::white);
-    item2->setPos(30,500);
-    scene->addItem(item2);
-
-
-    ArrayList<Card> CardsDeck(54);
-        int id=0;
-        for (int i=1;i<14;i++){
-            Card miCarta;
-            miCarta.setType("Hearts");
-            miCarta.setValue(i);
-            miCarta.setId(id++);
-            qDebug()<< QString::number(i)+"Corazon;"+QString::number(id);
-            miCarta.setSide(0);
-            CardsDeck.append(miCarta);
-        }
-        for (int i=1;i<14;i++){
-            Card miCarta;
-            miCarta.setType("Spades");
-            miCarta.setValue(i);
-            miCarta.setId(id++);
-            qDebug()<< QString::number(i)+"Espada;"+QString::number(id);
-            CardsDeck.append(miCarta);
-        }
-        for (int i=1;i<14;i++){
-            Card miCarta;
-            miCarta.setType("Diamonds");
-            miCarta.setValue(i);
-            miCarta.setId(id++);
-            qDebug()<< QString::number(i)+"Rombo;"+QString::number(id);
-            CardsDeck.append(miCarta);
-        }
-        for (int i=1;i<14;i++){
-            Card miCarta;
-            miCarta.setType("Clubs");
-            miCarta.setValue(i);
-            miCarta.setId(id++);
-            qDebug()<< QString::number(i)+"Trebol;"+QString::number(id);
-            CardsDeck.append(miCarta);
-        }
-
-
-    ArrayStack<Card> Mazo1(54);
-        srand((int) time(0));
-        while (Mazo1.getSize()!=CardsDeck.getSize()){
-            int r = (rand() % CardsDeck.getSize());
-            int que;
-            for (int i=0;i<CardsDeck.getSize();i++){
-                que=Mazo1.secuencial(r);
-                if (que==-1){
-
-                CardsDeck.gotoPos(r);
-                Card insertar=CardsDeck.getValue();
-                Mazo1.push(insertar);
-                insertar.toString();
-
-                }
-       }
-    }
-
-    ArrayStack<Card> Mazo2(54);
-        srand((int) time(0));
-        while (Mazo2.getSize()!=CardsDeck.getSize()){
-            int r = (rand() % CardsDeck.getSize());
-            int que;
-            for (int i=0;i<CardsDeck.getSize();i++){
-                Card comp=Mazo2.getValue();
-                que=Mazo2.secuencial(r);
-                if (que==-1){
-                    CardsDeck.gotoPos(r);
-                    Card insertar=CardsDeck.getValue();
-                    Mazo2.push(insertar);
-                    insertar.toString();
-                }
-       }
-    }
-
+    CardDeck *Mazo1 = new CardDeck;
+    ArrayList<Card> caquita = Mazo1->defaultBoard();
+    qDebug()<< caquita.getSize();
     int x = 260;
     int y = 10;
+    for (int i=0;i<caquita.getSize();i++){
+        caquita.gotoPos(i);
+        Card cartaCaca = caquita.getValue();
+        qDebug()<< QString::fromStdString(cartaCaca.toString());
+    }
 
-    for (int i=1;i<49;i++){
+    for (int i=0;i<caquita.getSize();i++){
         Card miCarta;
-        miCarta = Mazo1.pop();
-        cardButton* caca = new cardButton(miCarta,x,y);
+        caquita.gotoPos(i);
+        miCarta = caquita.getValue();
+        CardButton* cardButton = new CardButton(miCarta,x,y);
+        cardButton->setRotation(90);
         if (x > 930){
             x=260;
             y += 70;
         }else{
             x += 80;
         }
-        scene->addItem(caca);
+        scene->addItem(cardButton);
     }
-    qDebug() << Mazo1.getSize();
-
-    for (int i=1;i<=51;i++){
+/*
+    CardDeck *Baraja = new CardDeck;
+    Baraja->random();
+    for (int i=largo;i>=0;i--){
         Card miCarta;
-        miCarta = Mazo2.pop();
-        cardButton* caca = new cardButton(miCarta,x,y);
-        if (x > 930){
-            x=260;
-            y += 70;
-        }else{
-            x += 80;
-        }
-
-        scene->addItem(caca);
+        Baraja->gotoPos(i);
+        miCarta = Baraja->getValue();
+        CardButton* cardButton = new CardButton(miCarta,100,500);
+        cardButton->setSize(100,100);
+        cardButton->setMove();
+        scene->addItem(cardButton);
     }
 
-    ArrayStack<Card> Baraja(54);
-        srand((int) time(0));
-        while (Baraja.getSize()!=CardsDeck.getSize()){
-            int r = (rand() % CardsDeck.getSize());
-            int que;
-            for (int i=0;i<CardsDeck.getSize();i++){
-                que=Baraja.secuencial(r);
-                if (que==-1){
-                    CardsDeck.gotoPos(r);
-                    Card insertar=CardsDeck.getValue();
-                    Baraja.push(insertar);
-                    insertar.toString();
-                }
-       }
-    }
-        for (int i=1;i<49;i++){
+    int i=0;
+     playersNum =2;
+    qDebug() << playersNum;
+    while(i<playersNum){
+        Player actual = Jugadores.getElement();
+        for (int i=0;i<7;i++){
             Card miCarta;
-            miCarta = Baraja.pop();
-
-            cardButton* caca = new cardButton(miCarta,30,500);
-            caca->setMove();
-            caca->setSize(1.6);
-
-            scene->addItem(caca);
+            miCarta = Baraja->pop();
+            actual.appendCard(miCarta);
         }
+        Jugadores.Next();
+        i++;
+    }
+    Jugadores.gotoStart();
+    showInfo(Jugadores.getElement());
+    Button *nextButton= new Button("Next","NextEnter",1180,650);
+    connect(nextButton,SIGNAL(clicked()),this,SLOT(nextRound()));
+    scene->addItem(nextButton);
+    */
+}
+
+void Game::nextRound(){
+    scene->removeItem(stringTurno);
+    scene->removeItem(stringRound);
+    Jugadores.Next();
+    actual = Jugadores.getElement();
+    round++;
+    HandButtons->gotoStart();
+    for (int i=0;i<7;i++){
+        CardButton* carta = HandButtons->remove();
+        scene->removeItem(carta);
 
     }
+    showInfo(actual);
 
 
+
+
+}
+
+void Game::showInfo(Player Jugador){
+    string actualName = Jugador.getName();
+    QString text = ("Turno de:"+ QString::fromStdString(actualName));
+    stringTurno = new QGraphicsTextItem(text);
+    stringTurno->setDefaultTextColor(Qt::white);
+    stringTurno->setPos(1060,20);
+    scene->addItem(stringTurno);
+    QString roundText = ("Ronda:"+ QString::number(round));
+    stringRound= new QGraphicsTextItem(roundText);
+    stringRound->setDefaultTextColor(Qt::white);
+    stringRound->setPos(1130,50);
+    scene->addItem(stringRound);
+    ArrayList<Card>* caca2 = Jugador.getMano();
+
+    int x=1200, y=100;
+    for (int i=0;i<caca2->getSize();i++){
+        Card miCarta;
+        caca2->gotoPos(i);
+        miCarta = caca2->getValue();
+        CardButton* carta = new CardButton(miCarta,x,y);
+        carta->setRotation(90);
+        HandButtons->append(carta);
+        y+=100;
+        carta->setSize(100,100);
+        //carta->setMove();
+        scene->addItem(carta);
+   }
+}
+
+void Game::test(){
+    qDebug()<< QString("cardButton no sirve");
+}

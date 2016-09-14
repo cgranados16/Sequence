@@ -1,26 +1,31 @@
-#include "button.h"
+#include "Button.h"
 #include<QMessageBox>
-#include "game.h"
+#include "Game.h"
 #include "CircleList.h"
 #include <QDebug>
-extern Control * game;
+
 extern Game* board;
+extern Control * game;
 extern QLineEdit* playerNameBox;
 extern CircleList<Player> Jugadores;
 extern int playersNum;
 int i=1;
+
+const QString PATH = ":/Buttons/Resources/Buttons/";
+const QString png = ".png";
+
 Button::Button(QString id, QString image, int x, int y)
 {
     this->button= new QGraphicsPixmapItem;
     this->id = id;
-    setPixmap(QPixmap(image));
+    setPixmap(QPixmap(PATH+image+png));
     setPos(x,y);
     setAcceptHoverEvents(true);
     setEnabled(true);
 }
 
 void Button::setImage(QString image){
-    this->setPixmap(QPixmap(image));
+    this->setPixmap(QPixmap(PATH+image+png));
 }
 
 void Button::setPos(int x, int y){
@@ -31,7 +36,7 @@ void Button::setScale(int scale){
     this->QGraphicsItem::setScale(scale);
 }
 
-void Button::hoverEnterEvent(QGraphicsSceneHoverEvent *event){
+void Button::hoverEnterEvent(QGraphicsSceneHoverEvent*){
     if (id=="Start"){
         this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/StartLeave.png"));
     }
@@ -41,7 +46,7 @@ void Button::hoverEnterEvent(QGraphicsSceneHoverEvent *event){
     if (id=="Next"){
         this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/NextLeave.png"));
     }
-    if (id=="Back1"){
+    if (id=="Back"){
         this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/BackLeave.png"));
     }
     if (id=="2Players"){
@@ -56,7 +61,7 @@ void Button::hoverEnterEvent(QGraphicsSceneHoverEvent *event){
 
 }
 
-void Button::hoverLeaveEvent(QGraphicsSceneHoverEvent *event){
+void Button::hoverLeaveEvent(QGraphicsSceneHoverEvent*){
     if (id=="Start"){
         this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/StartEnter.png"));
     }
@@ -66,7 +71,7 @@ void Button::hoverLeaveEvent(QGraphicsSceneHoverEvent *event){
     if (id=="Next"){
         this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/NextEnter.png"));
     }
-    if (id=="Back1"){
+    if (id=="Back"){
         this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/BackEnter.png"));
     }
     if (id=="2Players"){
@@ -81,32 +86,21 @@ void Button::hoverLeaveEvent(QGraphicsSceneHoverEvent *event){
 
 }
 
-void Button::mousePressEvent(QGraphicsSceneMouseEvent *event){
-    if (id=="Start"){
-       game->selectionWindow();
-
-    }
-    if (id=="End"){
-        game->close();
-    }
-    if (id=="Back1"){
-       game->mainWindow();
-    }
-
-    if (id=="2Players"){
+void Button::mousePressEvent(QGraphicsSceneMouseEvent*){
+    emit clicked();
+/*    if (id=="2Players"){
         playersNum = 2;
-        game->inputNames(i);
-
     }
     if (id=="3Players"){
         playersNum = 3;
-        game->inputNames(i);
+
 
     }
     if (id=="4Players"){
         playersNum = 4;
-        game->inputNames(i);
+
     }
+
     if (id=="Next"){   
         qDebug()<< QString("Nombre de Jugador: ")+ playerNameBox->text();
         if (i<playersNum){
@@ -135,17 +129,13 @@ void Button::mousePressEvent(QGraphicsSceneMouseEvent *event){
 
             for (int i=0;i<Jugadores.getSize();i++){
                 Player actual = Jugadores.getElement();
-                string yea = actual.getName();
-                qDebug()<<"Jugadores "+ QString::number(Jugadores.getPos()) + QString::fromStdString(yea);
                 Jugadores.Next();
             }
             game->close();
             board = new Game();
             board->show();
         }
-
-
-    }
+    }*/
 }
 
 Button::~Button(){

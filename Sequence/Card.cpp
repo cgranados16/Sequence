@@ -74,5 +74,6 @@ int Card::getSide(){
 }
 
 Card::~Card(){
-    //dtor
+    type="";
+    value=0;
 }

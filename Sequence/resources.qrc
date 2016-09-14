@@ -14,6 +14,19 @@
         <file>Resources/Buttons/NextLeave.png</file>
         <file>Resources/Buttons/StartEnter.png</file>
         <file>Resources/Buttons/StartLeave.png</file>
+        <file>Resources/boardBackground.jpg</file>
+        <file>Resources/Cards/JClubs.png</file>
+        <file>Resources/Cards/JDiamonds.png</file>
+        <file>Resources/Cards/JHearts.png</file>
+        <file>Resources/Cards/JSpades.png</file>
+        <file>Resources/Cards/KClubs.png</file>
+        <file>Resources/Cards/KDiamonds.png</file>
+        <file>Resources/Cards/KHearts.png</file>
+        <file>Resources/Cards/KSpades.png</file>
+        <file>Resources/Cards/QClubs.png</file>
+        <file>Resources/Cards/QDiamonds.png</file>
+        <file>Resources/Cards/QHearts.png</file>
+        <file>Resources/Cards/QSpades.png</file>
     </qresource>
     <qresource prefix="/Resources">
         <file>Resources/Background.png</file>
@@ -56,7 +69,6 @@
         <file>Resources/Cards/10Diamonds.png</file>
         <file>Resources/Cards/10Hearts.png</file>
         <file>Resources/Cards/10Spades.png</file>
-        <file>Resources/Cards/AClubes.png</file>
         <file>Resources/Cards/ADiamonds.png</file>
         <file>Resources/Cards/AHearts.png</file>
         <file>Resources/Cards/ASpades.png</file>
@@ -103,5 +115,17 @@
         <file>Resources/Cards/Side/AHearts.png</file>
         <file>Resources/Cards/Side/ASpades.png</file>
         <file>Resources/Cards/Side/JDiamonds.png</file>
+        <file>Resources/Cards/JClubs.png</file>
+        <file>Resources/Cards/JHearts.png</file>
+        <file>Resources/Cards/JSpades.png</file>
+        <file>Resources/Cards/KClubs.png</file>
+        <file>Resources/Cards/KDiamonds.png</file>
+        <file>Resources/Cards/KHearts.png</file>
+        <file>Resources/Cards/KSpades.png</file>
+        <file>Resources/Cards/QClubs.png</file>
+        <file>Resources/Cards/QDiamonds.png</file>
+        <file>Resources/Cards/QHearts.png</file>
+        <file>Resources/Cards/QSpades.png</file>
+        <file>Resources/Cards/AClubs.png</file>
     </qresource>
 </RCC>

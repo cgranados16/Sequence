@@ -1,9 +1,10 @@
 #include "ArrayList.h"
 
 #include "Card.h"
+#include "CardButton.h"
 #include <iostream>
 #include <stdexcept>
-#define default_max_size 1024
+
 template<typename E>
 
 ArrayList<E>::ArrayList(int pMax){
@@ -12,6 +13,8 @@ ArrayList<E>::ArrayList(int pMax){
     pos=0;
     elements= new E[pMax];
 }
+
+
 template<typename E>
 E ArrayList<E>::getValue(){
     if(pos < 0 || pos > size){
@@ -116,18 +119,19 @@ void ArrayList<E>::insertionSort(){
 }
 */
 
-template<typename E>
-int ArrayList<E>::secuencial(int value){
+//template<typename E>
+/*int ArrayList<E>::secuencial(int value){
     gotoStart();
     while (pos<size){
         E actual=getValue();
-        if (actual.getId()==value){
+        if (actual->getId()==value){
             return pos;
         }
         pos++;
     }
     return -1;
 }
+*/
 
 
 template<typename E>
@@ -140,3 +144,5 @@ ArrayList<E>::~ArrayList(){
 }
 
 template class ArrayList<Card>;
+template class ArrayList<CardButton*>;
+template class ArrayList<int>;

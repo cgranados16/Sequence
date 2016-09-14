@@ -1,5 +1,5 @@
-#ifndef CARDBUTTON_H
-#define CARDBUTTON_H
+#ifndef CardButton_H
+#define CardButton_H
 
 #include <QGraphicsRectItem>
 #include <QGraphicsTextItem>
@@ -7,47 +7,47 @@
 #include <QGraphicsScene>
 #include <QBrush>
 #include <QGraphicsSceneMouseEvent>
-#include "control.h"
+#include "Control.h"
 #include <QKeyEvent>
 #include <QObject>
 #include "Card.h"
 
 class Control;
 
-class cardButton: public QGraphicsPixmapItem
+class CardButton: public QObject, public QGraphicsPixmapItem
 {
-    //Q_OBJECT
+    Q_OBJECT
 public:
-    cardButton(Card card, int x, int y);
-    void mousePressEvent(QGraphicsSceneMouseEvent *event);
-    void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);
-    void hoverLeaveEvent(QGraphicsSceneHoverEvent *event);
-    void hoverEnterEvent(QGraphicsSceneHoverEvent *event);
-    void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
+    CardButton(Card card , int x, int y ,int height = 75, int width = 75);
+    void mousePressEvent(QGraphicsSceneMouseEvent*);
+    void mouseDoubleClickEvent(QGraphicsSceneMouseEvent*);
+    void hoverLeaveEvent(QGraphicsSceneHoverEvent*);
+    void hoverEnterEvent(QGraphicsSceneHoverEvent*);
+    void mouseMoveEvent(QGraphicsSceneMouseEvent*event);
     void setImage(QString image);
     void setPos(int x,int y);
     void setMove();
     bool getMove();
     bool isCard(bool check);
-    void setSize(double scale);
+    void setSize(int x, int y);
     Card getCard();
     QPixmap getPixmap();
-
-
-    void dropEvent(QGraphicsSceneDragDropEvent *event) Q_DECL_OVERRIDE;
-    void dragLeaveEvent(QGraphicsSceneDragDropEvent *event)Q_DECL_OVERRIDE;
-    void dragEnterEvent(QGraphicsSceneDragDropEvent *event)Q_DECL_OVERRIDE;
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent*) Q_DECL_OVERRIDE;
 
 private:
     Card card;
-    QGraphicsPixmapItem* button;
+    int height;
+    int width;
+    QGraphicsPixmapItem* Button;
     QString imagen;
+    QPixmap image;
     bool move;
+    QPixmap ima;
 
-    int size[2];
 
-private slots:
+signals:
+    void clicked();
+    void selected();
 
 
 };

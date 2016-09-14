@@ -1,11 +1,11 @@
 #include "Player.h"
 #include <iostream>
-#define SIZE_LIST 3
 using namespace std;
 
 Player::Player(){
     this->name = name;
     this->turno = turno;
+    mano = new ArrayList<Card>(SIZE_LIST);
 }
 
 void Player::setName(string name){
@@ -22,6 +22,14 @@ void Player::setTurno(int turno){
 
 int Player::getTurno(){
     return turno;
+}
+
+void Player::appendCard(Card carta){
+    mano->append(carta);
+}
+
+ArrayList<Card>* Player::getMano(){
+    return mano;
 }
 
 Player::~Player()
