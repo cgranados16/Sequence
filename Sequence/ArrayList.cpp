@@ -4,9 +4,10 @@
 #include "CardButton.h"
 #include <iostream>
 #include <stdexcept>
+#include <QDebug>
+
 
 template<typename E>
-
 ArrayList<E>::ArrayList(int pMax){
     max=pMax;
     size=0;
@@ -87,7 +88,7 @@ void ArrayList<E>::insert(E pElement){
     size++;
 }
 
-//precondición pos apunta elemento a borrar
+//precondici?n pos apunta elemento a borrar
 template<typename E>
 E ArrayList<E>::remove(){
     if(size==0){
@@ -98,51 +99,26 @@ E ArrayList<E>::remove(){
         elements[i]=elements[i+1];
     }
     size--;
-    return (deletedElement);
+    return deletedElement;
 }
 
-
-/*template<typename E>
-void ArrayList<E>::insertionSort(){
-    for (int i=0;i<size;i++){
-        int temp=i;
-        while (temp>0){
-            if (elements[temp]<elements[temp-1]){
-                int hola= elements[temp];
-                elements[temp]=elements[temp-1];
-                elements[temp-1]=hola;
-            }
-            temp--;
-        }
-        pos++;
+template<typename E>
+void ArrayList<E>::clear(){
+    while(size!=0){
+        pos=size;
+        remove();
     }
 }
-*/
-
-//template<typename E>
-/*int ArrayList<E>::secuencial(int value){
-    gotoStart();
-    while (pos<size){
-        E actual=getValue();
-        if (actual->getId()==value){
-            return pos;
-        }
-        pos++;
-    }
-    return -1;
-}
-*/
-
 
 template<typename E>
 ArrayList<E>::~ArrayList(){
     //destructor
-
     size=0;
     pos=0;
     delete[] elements;
 }
 
-template class ArrayList<Card>;
+template class ArrayList<Card*>;
 template class ArrayList<CardButton*>;
-template class ArrayList<int>;
+template class ArrayList<ArrayList<Card*>>;
+

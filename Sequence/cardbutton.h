@@ -18,24 +18,33 @@ class CardButton: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
-    CardButton(Card card , int x, int y ,int height = 75, int width = 75);
-    void mousePressEvent(QGraphicsSceneMouseEvent*);
-    void mouseDoubleClickEvent(QGraphicsSceneMouseEvent*);
-    void hoverLeaveEvent(QGraphicsSceneHoverEvent*);
-    void hoverEnterEvent(QGraphicsSceneHoverEvent*);
-    void mouseMoveEvent(QGraphicsSceneMouseEvent*event);
+    CardButton(Card *card , int x, int y , int height = 75, int width = 75);
     void setImage(QString image);
-    void setPos(int x,int y);
     void setMove();
     bool getMove();
     bool isCard(bool check);
     void setSize(int x, int y);
-    Card getCard();
+    Card *getCard();
     QPixmap getPixmap();
+    void setPos(int x, int y);
+    void resetPos();
+    int type() const;
+    int getX();
+    int getY();
+
+    /*
+     * Events
+     */
+    void mousePressEvent(QGraphicsSceneMouseEvent*event);
+    void hoverLeaveEvent(QGraphicsSceneHoverEvent*);
+    void hoverEnterEvent(QGraphicsSceneHoverEvent*);
+    void mouseMoveEvent(QGraphicsSceneMouseEvent*event);
     void mouseReleaseEvent(QGraphicsSceneMouseEvent*) Q_DECL_OVERRIDE;
 
 private:
-    Card card;
+    Card* card;
+    int xPos;
+    int yPos;
     int height;
     int width;
     QGraphicsPixmapItem* Button;
@@ -47,7 +56,6 @@ private:
 
 signals:
     void clicked();
-    void selected();
 
 
 };

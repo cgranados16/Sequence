@@ -6,15 +6,14 @@
 #include "player.h"
 #include <QDebug>
 
+#include <QTimer>
 #include "Game.h"
 #include <QTimeLine>
 #include <QGraphicsItemAnimation>
 #include <ctime>
 
-extern int playersNum;
-extern CircleList<Player> players;
-extern QFont myFont;
-extern CircleList<Player> Jugadores;
+extern int TOTAL_PLAYERS;
+extern CircleList<Player*> Jugadores;
 QLineEdit* playerNameBox;
 
 extern Game* board;
@@ -33,8 +32,9 @@ Control::Control()
     setFixedSize(800, 600); // le da un tamano fijp al view
     setBackgroundBrush(QBrush(QImage(":/Resources/Resources/Background.png"))); // agregar imagen de fondo
     setScene(this->scene); // cambia la escena por defecto a la que se eta creando
-    mainWindow();
     signalMapper = new QSignalMapper (this) ;
+    mainWindow();
+
 }
 
 void Control::mainWindow(){
@@ -51,6 +51,7 @@ void Control::mainWindow(){
 }
 
 void Control::selectionWindow(){
+    Jugadores.clear();
     scene->clear();
     backButton= new Button("Back","BackEnter",100,480);
     scene->addItem(backButton);
@@ -66,45 +67,52 @@ void Control::selectionWindow(){
     item1->setPos(180,200);
     scene->addItem(item1);
 
-    connect (twoPlayersButton, SIGNAL(clicked()), signalMapper, SLOT(map()));
-    connect (threePlayersButton, SIGNAL(clicked()), signalMapper, SLOT(map()));
-    connect (fourPlayersButton, SIGNAL(clicked()), signalMapper, SLOT(map()));
+    QSignalMapper* playerMap = new QSignalMapper (this) ;
 
-    signalMapper -> setMapping (twoPlayersButton, 2) ;
-    signalMapper -> setMapping (threePlayersButton, 3) ;
-    signalMapper -> setMapping (fourPlayersButton, 4) ;
-    connect (signalMapper, SIGNAL(mapped(int)), this, SLOT(setPlayersNum(int))) ;
-    connect (signalMapper, SIGNAL(mapped(int)), this, SLOT(inputNames(int))) ;
+    connect (twoPlayersButton, SIGNAL(clicked()), playerMap, SLOT(map()),Qt::UniqueConnection);
+    connect (threePlayersButton, SIGNAL(clicked()), playerMap, SLOT(map()),Qt::UniqueConnection);
+    connect (fourPlayersButton, SIGNAL(clicked()), playerMap, SLOT(map()),Qt::UniqueConnection);
 
+    playerMap -> setMapping (twoPlayersButton, 2) ;
+    playerMap -> setMapping (threePlayersButton, 3) ;
+    playerMap -> setMapping (fourPlayersButton, 4) ;
+    connect (playerMap, SIGNAL(mapped(int)), this, SLOT(setPlayersNum(int))) ;
 }
 
 void Control::setPlayersNum(int i){
-    playersNum = i;
+    TOTAL_PLAYERS = i;
+    if (TOTAL_PLAYERS>=3){
+        SIZE_LIST = 6;
+    }else{
+        SIZE_LIST = 7;
+    }
+    qDebug() << TOTAL_PLAYERS;
+    inputNames(1);
 }
 
-void Control::inputNames(int i){
+void Control::inputNames(int playerNum){
     scene->clear();
     nextButton= new Button("Next","NextEnter",580,480);
     scene->addItem(nextButton);
     backButton= new Button("Back","BackEnter",100,480);
     scene->addItem(backButton);
-    QObject::connect(backButton,SIGNAL(clicked()),this,SLOT(selectionWindow()));
+    QObject::connect(backButton,SIGNAL(clicked()),this,SLOT(selectionWindow()),Qt::UniqueConnection);
     QString text = ("Ingrese el nombre del jugador ");
-    QGraphicsTextItem* item2 = new QGraphicsTextItem(text+QString::number((i%playersNum)+1));
-    item2->setDefaultTextColor(Qt::white);
-    item2->setPos(160,220);
-    scene->addItem(item2);
+    QGraphicsTextItem* playerCount = new QGraphicsTextItem(text+QString::number(playerNum));
+    playerCount->setDefaultTextColor(Qt::white);
+    playerCount->setPos(160,220);
+    scene->addItem(playerCount);
     playerNameBox = new QLineEdit;
     playerNameBox->setGeometry(180,280,450,30);
-    scene->addWidget(playerNameBox);
+    playerNameBox->setMaxLength(10);
     connect(playerNameBox, SIGNAL(textChanged(QString)), this, SLOT(changeName(QString))); //Conecta la senal del input a la funcion Change Name
-
-    connect (nextButton, SIGNAL(clicked()), signalMapper, SLOT(map())); //Conecta el boton Next
     connect (playerNameBox, SIGNAL(returnPressed()), signalMapper, SLOT(map())); //Conecta el Enter
-    signalMapper -> setMapping (nextButton, i);
-    signalMapper -> setMapping (playerNameBox, i);
-    connect (signalMapper, SIGNAL(mapped(int)), this, SLOT(addPlayer(int))) ;
-    connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(addPlayer(int)));
+    connect (nextButton, SIGNAL(clicked()), signalMapper, SLOT(map()),Qt::UniqueConnection); //Conecta el boton Next
+    signalMapper -> setMapping (nextButton, playerNum);
+    signalMapper -> setMapping (playerNameBox, playerNum);
+    connect (signalMapper, SIGNAL(mapped(int)), this, SLOT(addPlayer(int)),Qt::UniqueConnection) ;
+    connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(addPlayer(int)),Qt::UniqueConnection);
+    scene->addWidget(playerNameBox);
     playerNameBox->setFocus();
 }
 
@@ -117,23 +125,18 @@ void Control::changeName(QString e){
 void Control::addPlayer(int i){
     if (playerName!=""){
         qDebug()<< QString("Nombre de Jugador: ")+ playerName;
-        Player Jugador;
-        Jugador.setName(playerName.toStdString());
-        Jugador.setTurno(i%playersNum);
+        Player* Jugador = new Player();
+        Jugador->setName(playerName.toStdString());
+        Jugador->setTurno(i);
         Jugadores.gotoEnd();
         Jugadores.insert(Jugador);
         playerNameBox->clear();
         playerName.clear();
-        if (i==1){
-            Jugadores.gotoStart();
-            for (int i=0;i<Jugadores.getSize();i++){
-                Player caca = Jugadores.getElement();
-                qDebug() << QString::fromStdString(caca.getName());
-                Jugadores.Next();
-            }
-            startGame();
+        if (i>=TOTAL_PLAYERS){
+            loadingScreen();
+
         }else{
-            inputNames(i-1);
+            inputNames(i+1);
         }
     }else{
         QGraphicsTextItem* WarningMsg = new QGraphicsTextItem("¡Nombre no puede estar vacio!");
@@ -144,7 +147,7 @@ void Control::addPlayer(int i){
          * Crea una pequena animacion con el Warning Message
          *
          * */
-/*        QTimeLine *timer = new QTimeLine(5000);
+        /*        QTimeLine *timer = new QTimeLine(5000);
         timer->setFrameRange(0, 100);
         QGraphicsItemAnimation *animation = new QGraphicsItemAnimation;
         animation->setItem(WarningMsg);
@@ -158,9 +161,21 @@ void Control::addPlayer(int i){
     }
 }
 
+void Control::loadingScreen(){
+    scene->clear();
+    QGraphicsTextItem* loadingText = new QGraphicsTextItem("Cargando...");
+    loadingText->setDefaultTextColor(Qt::white);
+    loadingText->setPos(230,300);
+    loadingText->setScale(2);
+    scene->addItem(loadingText);
+    QTimer::singleShot(0.01, this, SLOT(startGame()));
+
+}
+
 void Control::startGame(){
     Jugadores.gotoStart();
-    this->close();
     Game* board = new Game();
+    this->close();
     board->show();
 }
+

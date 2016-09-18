@@ -61,4 +61,4 @@ CircleList<E>::~CircleList()
     LinkedList<E>::clear();
 }
 
-template class CircleList<Player>;
+template class CircleList<Player*>;

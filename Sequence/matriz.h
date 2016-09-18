@@ -1,14 +1,23 @@
 #ifndef MATRIZ_H
 #define MATRIZ_H
-#include "ArrayList.h"
 #include "Card.h"
-using namespace std;
-template<typename E>
+template <typename E>
 
-class matriz : public ArrayList
+class Matriz
 {
 public:
-    matriz();
+    Matriz(int rows, int columns);
+    E getValue(int pRow, int pColumn);
+    virtual ~Matriz();
+    void setValue(int pRow, int pColumn, E value);
+    int getRows();
+    int getColumns();
+    int getSize();
+
+protected:
+   int rows;
+   int columns;
+   E** matrix;
 };
 
 #endif // MATRIZ_H

@@ -29,6 +29,8 @@ private:
     QString id;
     int x;
     int y;
+    const QString PATH = ":/Buttons/Resources/Buttons/";
+    const QString png = ".png";
 
 signals:
     void clicked();

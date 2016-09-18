@@ -1,7 +1,8 @@
 #include "LinkedList.h"
-#include "Player.h"
+
 #include <stdexcept>
 #include <iostream>
+#include <QDebug>
 using namespace std;
 
 template<typename E>
@@ -76,13 +77,20 @@ void LinkedList<E>::print(){
 }
 */
 
+
 template<typename E>
 E LinkedList<E>::remove(){
+    if (size==0){
+        throw runtime_error("Empty List");
+    }
     Node<E>* node=curr->getNext();
-    curr->setNext(node->getNext());
+    if (curr->getNext() == last){last=curr;};
+    if (node->getNext()!=NULL){
+        curr->setNext(node->getNext());
+    }
     size--;
-    delete node;
     return node->getValue();
+
 }
 
 template<typename E>
@@ -126,4 +134,6 @@ LinkedList<E>::~LinkedList(){
     clear();
 }
 
-template class LinkedList<Player>;
+template class LinkedList<Player*>;
+template class LinkedList<Card*>;
+template class LinkedList<CardButton*>;

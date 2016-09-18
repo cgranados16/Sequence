@@ -15,22 +15,12 @@
         <file>Resources/Buttons/StartEnter.png</file>
         <file>Resources/Buttons/StartLeave.png</file>
         <file>Resources/boardBackground.jpg</file>
-        <file>Resources/Cards/JClubs.png</file>
-        <file>Resources/Cards/JDiamonds.png</file>
-        <file>Resources/Cards/JHearts.png</file>
-        <file>Resources/Cards/JSpades.png</file>
-        <file>Resources/Cards/KClubs.png</file>
-        <file>Resources/Cards/KDiamonds.png</file>
-        <file>Resources/Cards/KHearts.png</file>
-        <file>Resources/Cards/KSpades.png</file>
-        <file>Resources/Cards/QClubs.png</file>
-        <file>Resources/Cards/QDiamonds.png</file>
-        <file>Resources/Cards/QHearts.png</file>
-        <file>Resources/Cards/QSpades.png</file>
     </qresource>
     <qresource prefix="/Resources">
         <file>Resources/Background.png</file>
         <file>Resources/Fonts/press_start_2p/PressStart2P.ttf</file>
+        <file>Resources/BoardBackground.jpg</file>
+        <file>Resources/BoardBackground2.jpg</file>
     </qresource>
     <qresource prefix="/Cards">
         <file>Resources/Cards/2Clubs.png</file>
@@ -72,49 +62,7 @@
         <file>Resources/Cards/ADiamonds.png</file>
         <file>Resources/Cards/AHearts.png</file>
         <file>Resources/Cards/ASpades.png</file>
-        <file>Resources/Cards/BackCard.jpg</file>
         <file>Resources/Cards/JDiamonds.png</file>
-        <file>Resources/Cards/Side/2Clubs.png</file>
-        <file>Resources/Cards/Side/2Diamonds.png</file>
-        <file>Resources/Cards/Side/2Hearts.png</file>
-        <file>Resources/Cards/Side/2Spades.png</file>
-        <file>Resources/Cards/Side/3Clubs.png</file>
-        <file>Resources/Cards/Side/3Diamonds.png</file>
-        <file>Resources/Cards/Side/3Hearts.png</file>
-        <file>Resources/Cards/Side/3Spades.png</file>
-        <file>Resources/Cards/Side/4Clubs.png</file>
-        <file>Resources/Cards/Side/4Diamonds.png</file>
-        <file>Resources/Cards/Side/4Hearts.png</file>
-        <file>Resources/Cards/Side/4Spades.png</file>
-        <file>Resources/Cards/Side/5Clubs.png</file>
-        <file>Resources/Cards/Side/5Diamonds.png</file>
-        <file>Resources/Cards/Side/5Hearts.png</file>
-        <file>Resources/Cards/Side/5Spades.png</file>
-        <file>Resources/Cards/Side/6Clubs.png</file>
-        <file>Resources/Cards/Side/6Diamonds.png</file>
-        <file>Resources/Cards/Side/6Hearts.png</file>
-        <file>Resources/Cards/Side/6Spades.png</file>
-        <file>Resources/Cards/Side/7Clubs.png</file>
-        <file>Resources/Cards/Side/7Diamonds.png</file>
-        <file>Resources/Cards/Side/7Hearts.png</file>
-        <file>Resources/Cards/Side/7Spades.png</file>
-        <file>Resources/Cards/Side/8Clubs.png</file>
-        <file>Resources/Cards/Side/8Diamonds.png</file>
-        <file>Resources/Cards/Side/8Hearts.png</file>
-        <file>Resources/Cards/Side/8Spades.png</file>
-        <file>Resources/Cards/Side/9Clubs.png</file>
-        <file>Resources/Cards/Side/9Diamonds.png</file>
-        <file>Resources/Cards/Side/9Hearts.png</file>
-        <file>Resources/Cards/Side/9Spades.png</file>
-        <file>Resources/Cards/Side/10Clubs.png</file>
-        <file>Resources/Cards/Side/10Diamonds.png</file>
-        <file>Resources/Cards/Side/10Hearts.png</file>
-        <file>Resources/Cards/Side/10Spades.png</file>
-        <file>Resources/Cards/Side/AClubes.png</file>
-        <file>Resources/Cards/Side/ADiamonds.png</file>
-        <file>Resources/Cards/Side/AHearts.png</file>
-        <file>Resources/Cards/Side/ASpades.png</file>
-        <file>Resources/Cards/Side/JDiamonds.png</file>
         <file>Resources/Cards/JClubs.png</file>
         <file>Resources/Cards/JHearts.png</file>
         <file>Resources/Cards/JSpades.png</file>
@@ -127,5 +75,12 @@
         <file>Resources/Cards/QHearts.png</file>
         <file>Resources/Cards/QSpades.png</file>
         <file>Resources/Cards/AClubs.png</file>
+        <file>Resources/Cards/BackCard.png</file>
+    </qresource>
+    <qresource prefix="/Tokens">
+        <file>Resources/Token2.png</file>
+        <file>Resources/Token3.png</file>
+        <file>Resources/Token4.png</file>
+        <file>Resources/Token1.png</file>
     </qresource>
 </RCC>

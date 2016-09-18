@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INPUT(
 ./release\main.o
 ./release\ArrayList.o
@@ -17,3 +18,25 @@ INPUT(
 ./release\moc_control.o
 ./release\moc_game.o
 );
+=======
+INPUT(
+./release\main.o
+./release\ArrayList.o
+./release\ArrayStack.o
+./release\button.o
+./release\Card.o
+./release\cardbutton.o
+./release\CircleList.o
+./release\control.o
+./release\game.o
+./release\LinkedList.o
+./release\Node.o
+./release\Player.o
+./release\rectangulo.o
+./release\qrc_resources.o
+./release\moc_button.o
+./release\moc_cardbutton.o
+./release\moc_control.o
+./release\moc_game.o
+);
+>>>>>>> origin/master

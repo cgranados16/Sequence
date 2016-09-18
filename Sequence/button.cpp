@@ -6,13 +6,8 @@
 
 extern Game* board;
 extern Control * game;
-extern QLineEdit* playerNameBox;
 extern CircleList<Player> Jugadores;
 extern int playersNum;
-int i=1;
-
-const QString PATH = ":/Buttons/Resources/Buttons/";
-const QString png = ".png";
 
 Button::Button(QString id, QString image, int x, int y)
 {
@@ -88,54 +83,6 @@ void Button::hoverLeaveEvent(QGraphicsSceneHoverEvent*){
 
 void Button::mousePressEvent(QGraphicsSceneMouseEvent*){
     emit clicked();
-/*    if (id=="2Players"){
-        playersNum = 2;
-    }
-    if (id=="3Players"){
-        playersNum = 3;
-
-
-    }
-    if (id=="4Players"){
-        playersNum = 4;
-
-    }
-
-    if (id=="Next"){   
-        qDebug()<< QString("Nombre de Jugador: ")+ playerNameBox->text();
-        if (i<playersNum){
-            if (playerNameBox->text()!=""){
-                Player Jugador;
-                QString name = playerNameBox->text();
-                Jugador.setName(name.toStdString());
-                Jugador.setTurno(i);
-                Jugadores.gotoEnd();
-                Jugadores.insert(Jugador);
-                playerNameBox->clear();
-                game->inputNames(++i);
-            }else{
-                game->inputNames(i);
-            }
-        }else{
-            Player Jugador;
-            QString name = playerNameBox->text();
-            Jugador.setName(name.toStdString());
-            Jugador.setTurno(i);
-            Jugadores.gotoEnd();
-            Jugadores.insert(Jugador);
-            playerNameBox->clear();
-            Jugadores.gotoStart();
-
-
-            for (int i=0;i<Jugadores.getSize();i++){
-                Player actual = Jugadores.getElement();
-                Jugadores.Next();
-            }
-            game->close();
-            board = new Game();
-            board->show();
-        }
-    }*/
 }
 
 Button::~Button(){

@@ -9,7 +9,10 @@ using namespace std;
 Card::Card(){
     this->type="";
     this->value=0;
+    this->token=NULL;
+    this->side = 0;
 }
+
 string Card::getType(){
     return type;
 }
@@ -57,12 +60,24 @@ int Card::getId(){
 }
 
 
-void Card::setPlayer(string player){
+void Card::setPlayer(Player* player){
     this->player = player;
 }
-
-string Card::getPlayer(){
+Player* Card::getPlayer(){
     return player;
+}
+
+
+void Card::setToken(Token* token){
+    this->token = token;
+}
+
+bool Card::hasToken(){
+    if (token!=NULL){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 void Card::setSide(int side){

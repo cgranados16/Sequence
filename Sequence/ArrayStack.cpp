@@ -39,4 +39,4 @@ ArrayStack<E>::~ArrayStack()
     clear();
 }
 
-template class ArrayStack<Card>;
+template class ArrayStack<Card*>;

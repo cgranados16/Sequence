@@ -26,7 +26,10 @@ SOURCES += main.cpp \
     Player.cpp \
     Control.cpp \
     Game.cpp \
-    CardDeck.cpp
+    CardDeck.cpp \
+    MyQGraphicsScene.cpp \
+    Matriz.cpp \
+    Token.cpp
 
 HEADERS  += \
     ArrayList.h \
@@ -40,7 +43,10 @@ HEADERS  += \
     Game.h \
     Control.h \
     Button.h \
-    CardDeck.h
+    CardDeck.h \
+    MyQGraphicsScene.h \
+    Matriz.h \
+    Token.h
 
 RESOURCES += \
     resources.qrc

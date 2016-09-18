@@ -1,6 +1,8 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 #include "Node.h"
+#include "Player.h"
+#include "cardbutton.h"
 #include <cstddef>
 using namespace std;
 

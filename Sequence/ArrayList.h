@@ -1,13 +1,16 @@
 #ifndef ARRAYLIST_H
 #define ARRAYLIST_H
 #include "Card.h"
-using namespace std;
-template<typename E>
+#include <ctime>
+#define MAX_DEFAULT_SIZE 1024
 
+using namespace std;
+
+template<typename E>
 class ArrayList
 {
     public:
-        ArrayList(int pMax);
+        ArrayList(int pMax = MAX_DEFAULT_SIZE);
         E getValue();
         int getPos();
         int getSize();
@@ -21,11 +24,9 @@ class ArrayList
         E remove();
         int secuencial(int value);
         virtual ~ArrayList();
-        void insertionSort();
-
-
-
-    protected:
+        void insertionSort();     
+        void clear();
+protected:
         int size;
         int max;
         int pos;

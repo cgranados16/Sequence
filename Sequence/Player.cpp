@@ -5,7 +5,7 @@ using namespace std;
 Player::Player(){
     this->name = name;
     this->turno = turno;
-    mano = new ArrayList<Card>(SIZE_LIST);
+    mano = new ArrayList<Card*>(SIZE_LIST);
 }
 
 void Player::setName(string name){
@@ -24,11 +24,11 @@ int Player::getTurno(){
     return turno;
 }
 
-void Player::appendCard(Card carta){
+void Player::appendCard(Card* carta){
     mano->append(carta);
 }
 
-ArrayList<Card>* Player::getMano(){
+ArrayList<Card*>* Player::getMano(){
     return mano;
 }
 

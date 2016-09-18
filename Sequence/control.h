@@ -20,6 +20,7 @@ public:
     Control();
     QGraphicsScene* scene; // creo que debe ir private
 
+
 private:
     Button* startButton;
     Button* exitButton;
@@ -29,14 +30,16 @@ private:
     QLineEdit* playerNameBox;
     QString playerName;
 
-
+signals:
+    void enterPressed();
 public slots:
     void mainWindow();
     void selectionWindow();
-    void inputNames(int i);
+    void inputNames(int playerNum);
     void addPlayer(int i);
-    //void board();
+
     void setPlayersNum(int i);
+    void loadingScreen();
     void startGame();
     void changeName(QString e);
 };

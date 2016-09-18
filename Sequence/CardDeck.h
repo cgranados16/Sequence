@@ -3,18 +3,22 @@
 
 #include "ArrayStack.h"
 #include "Card.h"
-#include <ctime>
+#include "matriz.h"
+
 
 class Card;
 
-class CardDeck : public ArrayStack<Card>
+class CardDeck : public ArrayStack<Card*>
 {
 public:
     CardDeck();
     virtual ~CardDeck();
-    void random();
+    Matriz<Card*> *defaultBoard();
+    Matriz<Card *> *randomBoard();
+    ArrayStack<Card *>* getStack();
+
     void swap(int pos, int swapPos);
-    ArrayList<Card> defaultBoard();
+    void random(bool jacks = true);
 private:
     int id;
 

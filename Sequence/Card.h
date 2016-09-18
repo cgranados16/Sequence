@@ -7,7 +7,8 @@
 using namespace std;
 
 class Player;
-class Card
+class Token;
+class Card  
 {
 
     public:
@@ -20,20 +21,22 @@ class Card
         string toString();
         void setId(int id);
         int getId();
-        void setPlayer(string player);
         void setSide(int side);
         int getSide();
-        string getPlayer();
+        void setPlayer(Player* player);
+        Player* getPlayer();
+        void setToken(Token *token);
+        bool hasToken();
 
-    protected:
+protected:
 
     private:
-
         string type;
         int value;
         int id;
-        string player;
+        Player* player;
         int side; //Lado de la Carta 0 = Frente, 1 = volteada
+        Token* token;
 };
 
 #endif // CARD_H

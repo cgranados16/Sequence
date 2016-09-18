@@ -1,6 +1,11 @@
 #ifndef NODE_H
 #define NODE_H
 #include <cstddef>
+//=======================
+//Templates
+#include "Player.h"
+#include "cardbutton.h"
+//=======================
 using namespace std;
 template<typename E>
 

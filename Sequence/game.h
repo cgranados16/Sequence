@@ -4,6 +4,10 @@
 #include <QGraphicsScene>
 #include <QItemSelectionModel>
 #include "CardButton.h"
+#include "Card.h"
+#include "CircleList.h"
+#include "ArrayStack.h"
+#include "CardDeck.h"
 #include <QGenericMatrix>
 
 
@@ -12,23 +16,26 @@ class Game : public QGraphicsView
     Q_OBJECT
 public:
     Game();
-    QGraphicsScene* scene;
-    void showInfo(Player Jugador);
+    void showInfo(Player *Jugador);
+    void mousePressEvent(QGraphicsSceneMouseEvent *pMouseEvent);
+    void moveToTrash();
 
 public slots:
-    void nextRound();
-    void test();
+    void nextPlayer();
+    void showBoard(int random);
 
-private:   
-    Player actual;
+    void back();
+private:
+    ArrayStack<Card*> *Baraja;
+    Player* actual;
     int round;
     QGraphicsTextItem* stringTurno;
     QGraphicsTextItem* stringRound;
     ArrayList<CardButton*> *HandButtons;
     QSignalMapper* signalMapper;
     QItemSelectionModel *select;
+    CardDeck * cardBoard;
+    QGraphicsScene* scene;
 
-signals:
-    selectionChanged();
 };
 #endif // GAME_H

@@ -2,20 +2,23 @@
 #include "ArrayStack.h"
 #include<QMessageBox>
 #include <QDebug>
+
 extern Control * game;
 extern QGraphicsScene* scene;
 
 //Crea un boton de Carta
-CardButton::CardButton(Card card , int x, int y ,int height, int width){
+CardButton::CardButton(Card* card , int x, int y ,int height, int width){
     this->Button = new QGraphicsPixmapItem;
     this->card = card; //Guarda la carta
     this->height=height;
     this->width=width;
-    string valor = card.toString();
-    if (card.getSide()==0){
+    this->xPos=x;
+    this->yPos=y;
+    string valor = card->toString();
+    if (card->getSide()==0){
         imagen = ":/Cards/Resources/Cards/"+ QString::fromStdString(valor)+".png";
     }else{
-        imagen = ":/Cards/Resources/Cards/BackCard.jpg";
+        imagen = ":/Cards/Resources/Cards/BackCard.png";
     }
     QPixmap ima(imagen);
     image = ima.scaled(height,width,Qt::KeepAspectRatio,Qt::SmoothTransformation);
@@ -24,16 +27,17 @@ CardButton::CardButton(Card card , int x, int y ,int height, int width){
     this->move = false;
     this->setAcceptDrops(true);
     this->setAcceptHoverEvents(true);
+    //this->setFlag(QGraphicsItem::ItemIsSelectable);
+    this->setFlag(QGraphicsItem::ItemSendsGeometryChanges);
+
 }
-
-
 
 
 void CardButton::setMove(){
     setFlag(QGraphicsItem::ItemIsMovable);
     setFlag(QGraphicsItem::ItemSendsGeometryChanges);
     this->setAcceptHoverEvents(false);
-    setFlag(QGraphicsItem::ItemIsSelectable);
+    this->setFlag(QGraphicsItem::ItemIsSelectable);
     move = true;
 }
 
@@ -46,8 +50,13 @@ void CardButton::setPos(int x, int y){
     this->QGraphicsItem::setPos(x,y);
 }
 
+void CardButton::resetPos()
+{
+    this->QGraphicsItem::setPos(xPos,yPos);
+}
+
 void CardButton::setSize(int x, int y){
-    string valor = card.toString();
+    string valor = card->toString();
     imagen = ":/Cards/Resources/Cards/"+ QString::fromStdString(valor)+".png";
     QPixmap ima(imagen);
     image = ima.scaled(x,y,Qt::KeepAspectRatio,Qt::FastTransformation);
@@ -57,48 +66,39 @@ void CardButton::setSize(int x, int y){
 
 
 void CardButton::hoverEnterEvent(QGraphicsSceneHoverEvent *){
-    setZValue(1);
+    /*setZValue(1);
     setRotation(0);
-    setSize(300,300);
+    setSize(300,300);*/
 }
 
 void CardButton::hoverLeaveEvent(QGraphicsSceneHoverEvent*){
-    setZValue(0);
+   /* setZValue(0);
     setRotation(90);
-    setSize(height,width);
+    setSize(height,width);*/
 }
 
-Card CardButton::getCard(){
-    return this->card;
+Card* CardButton::getCard(){
+    return card;
 }
 
 
-void CardButton::mousePressEvent(QGraphicsSceneMouseEvent*){
-    emit clicked();
+void CardButton::mousePressEvent(QGraphicsSceneMouseEvent* event){
+    if(event->button() == Qt::LeftButton) {
+        qDebug() << "Custom item left clicked.";
+        // Anade el item a la seleccion
+
+        QGraphicsItem::mousePressEvent(event);
+        event->accept();
+    } else if(event->button() == Qt::RightButton) {
+        qDebug() << "Custom item right clicked.";
+        event->ignore();
+    }
 }
 
-void CardButton::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *){
-    /*if (card.getSide()==0){
-         card.setSide(1);
-         string valor = card.toString();
-         imagen = ":/images/Images/Cards/"+ QString::fromStdString(valor)+".png";
-         QPixmap ima(imagen);
-         QPixmap newPixmap = ima.scaled(QSize(75,75),  Qt::KeepAspectRatioByExpanding);
-         this->setPixmap(newPixmap);
-    }else{
-        card.setSide(0);
-        imagen = ":/images/Images/Cards/BackCard.jpg";
-        QPixmap ima(imagen);
-        QPixmap newPixmap = ima.scaled(QSize(100,100),  Qt::KeepAspectRatio);
-        this->setPixmap(newPixmap);
-    }*/
-}
+void CardButton::mouseMoveEvent(QGraphicsSceneMouseEvent *event){
+    QGraphicsItem::mouseMoveEvent(event); // Mueve el objeto
 
-void CardButton::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
-{
-    QGraphicsItem::mouseMoveEvent(event); // move the item...
-
-    // ...then check the bounds
+    // Comprueba que la carta no salga de la escena
     if (x() < 0)
         setPos(0, y());
     else if (x() >1250)
@@ -107,14 +107,23 @@ void CardButton::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
         setPos(x(), 0);
     else if (y() > 700)
         setPos(x(), 700);
-
-
 }
-
 
 void CardButton::mouseReleaseEvent(QGraphicsSceneMouseEvent *)
 {
-    emit (selected());
-
+   //this->setPos(xPos,yPos);
 }
 
+int CardButton::getX(){
+    return xPos;
+}
+
+int CardButton::getY(){
+    return yPos;
+}
+
+int CardButton::type() const
+    {
+        // Enable the use of qgraphicsitem_cast with this item.
+        return UserType+1;
+    }

@@ -1,5 +1,4 @@
 #include "Node.h"
-#include "Player.h"
 #include <iostream>
 #include <stdexcept>
 
@@ -38,4 +37,6 @@ Node<E>::~Node(){
     //next=NULL;
 }
 
-template class Node<Player>;
+template class Node<Player*>;
+template class Node<Card*>;
+template class Node<CardButton*>;
