@@ -9,6 +9,11 @@ class Token : public QGraphicsPixmapItem
 {
 public:
     Token(Player* player, qreal x, qreal y);
+    Player *getPlayer(); 
+    int type() const;
+    int getId();
+    void setId(int id);
+
 private:
     Player* player;
     int id;
@@ -18,7 +23,6 @@ private:
     QString imagen;
     const QString PATH = ":/Tokens/Resources/Token";
     const QString png = ".png";
-
 
 };
 

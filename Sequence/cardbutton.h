@@ -39,7 +39,6 @@ public:
     void hoverLeaveEvent(QGraphicsSceneHoverEvent*);
     void hoverEnterEvent(QGraphicsSceneHoverEvent*);
     void mouseMoveEvent(QGraphicsSceneMouseEvent*event);
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent*) Q_DECL_OVERRIDE;
 
 private:
     Card* card;

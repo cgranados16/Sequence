@@ -27,6 +27,9 @@ class Player
         ArrayList<Card*> *getMano();
         void setToken(Token *token);
         Token *getToken();
+        Card *removeCard(int pos);
+        void addSequence();
+        int getSequence();
 protected:
 
     private:
@@ -34,6 +37,7 @@ protected:
         int turno;
         ArrayList<Card*> *mano;
         Token* token;
+        int sequence;
 };
 
 #endif // Player_H

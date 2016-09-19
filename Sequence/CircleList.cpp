@@ -1,23 +1,22 @@
 #include "CircleList.h"
 #include "Player.h"
 #include <stdexcept>
-template<typename E>
 
+template<class E>
 CircleList<E>::CircleList(){
     this->first=new Node<E>();
     this->curr=this->first;
     this->first->setNext(this->first);
     this->size=0;
 }
-
-template<typename E>
+template<class E>
 void CircleList<E>::insert(E element){
     Node<E>* newNode=new Node<E>(element,this->curr->getNext());
     this->curr->setNext(newNode);
     this->size++;
 }
 
-template<typename E>
+template<class E>
 E CircleList<E>::remove(){
 
     if (this->curr->getNext()==this->first){
@@ -31,7 +30,7 @@ E CircleList<E>::remove(){
 }
 
 
-template<typename E>
+template<class E>
 void CircleList<E>::gotoEnd(){
     LinkedList<E>::gotoStart();
     while (this->curr->getNext()!=this->first){
@@ -39,7 +38,7 @@ void CircleList<E>::gotoEnd(){
     }
 }
 
-template<typename E>
+template<class E>
 void CircleList<E>::reversedList(){
     Node<E>* temporal, *tempFirst=this->first, *last;
     gotoEnd();
@@ -55,7 +54,7 @@ void CircleList<E>::reversedList(){
     this->first->setNext(last);
 }
 
-template<typename E>
+template<class E>
 CircleList<E>::~CircleList()
 {
     LinkedList<E>::clear();

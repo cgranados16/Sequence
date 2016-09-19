@@ -37,3 +37,9 @@ Makefile*
 
 # QtCtreator CMake
 CMakeLists.txt.user*
+
+#Resources
+*.jpg
+*.png
+*.ttf
+

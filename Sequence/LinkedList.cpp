@@ -1,8 +1,9 @@
 #include "LinkedList.h"
-
+#include "game.h"
 #include <stdexcept>
 #include <iostream>
 #include <QDebug>
+
 using namespace std;
 
 template<typename E>
@@ -64,20 +65,6 @@ void LinkedList<E>::append(E element){
     size++;
 }
 
-/*
-void LinkedList<E>::print(){
-    gotoStart();
-    cout<<"[";
-    for (int i=0;i<size;i++){
-        curr=curr->getNext();
-        cout<<curr->getValue();
-        if (i!=(size-1)){cout<<",";}
-    }
-    cout<<"]"<<endl;
-}
-*/
-
-
 template<typename E>
 E LinkedList<E>::remove(){
     if (size==0){
@@ -111,9 +98,9 @@ void LinkedList<E>::reversedList(){
 
 template<typename E>
 void LinkedList<E>::clear(){
-    Node<E>* a=first;
-    for(int i=0;i>size;i++){
-        first=a->getNext();
+    Node<E> a=first;
+    for(int i=0;i<size;i++){
+        first=a.getNext();
         delete first;
     }
     size=0;
@@ -127,8 +114,6 @@ E LinkedList<E>::getElement(){
     return this->curr->getValue();
 }
 
-
-
 template<typename E>
 LinkedList<E>::~LinkedList(){
     clear();
@@ -137,3 +122,5 @@ LinkedList<E>::~LinkedList(){
 template class LinkedList<Player*>;
 template class LinkedList<Card*>;
 template class LinkedList<CardButton*>;
+
+

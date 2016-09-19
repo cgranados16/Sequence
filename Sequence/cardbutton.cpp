@@ -52,7 +52,7 @@ void CardButton::setPos(int x, int y){
 
 void CardButton::resetPos()
 {
-    this->QGraphicsItem::setPos(xPos,yPos);
+    setPos(xPos,yPos);
 }
 
 void CardButton::setSize(int x, int y){
@@ -84,14 +84,9 @@ Card* CardButton::getCard(){
 
 void CardButton::mousePressEvent(QGraphicsSceneMouseEvent* event){
     if(event->button() == Qt::LeftButton) {
-        qDebug() << "Custom item left clicked.";
         // Anade el item a la seleccion
-
         QGraphicsItem::mousePressEvent(event);
         event->accept();
-    } else if(event->button() == Qt::RightButton) {
-        qDebug() << "Custom item right clicked.";
-        event->ignore();
     }
 }
 
@@ -109,11 +104,6 @@ void CardButton::mouseMoveEvent(QGraphicsSceneMouseEvent *event){
         setPos(x(), 700);
 }
 
-void CardButton::mouseReleaseEvent(QGraphicsSceneMouseEvent *)
-{
-   //this->setPos(xPos,yPos);
-}
-
 int CardButton::getX(){
     return xPos;
 }
@@ -123,7 +113,7 @@ int CardButton::getY(){
 }
 
 int CardButton::type() const
-    {
-        // Enable the use of qgraphicsitem_cast with this item.
-        return UserType+1;
-    }
+{
+
+    return UserType+1;
+}

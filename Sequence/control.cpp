@@ -13,9 +13,9 @@
 #include <ctime>
 
 extern int TOTAL_PLAYERS;
-extern CircleList<Player*> Jugadores;
+CircleList<Player*>* Jugadores;
 QLineEdit* playerNameBox;
-
+int boardType;
 extern Game* board;
 
 
@@ -34,9 +34,11 @@ Control::Control()
     setScene(this->scene); // cambia la escena por defecto a la que se eta creando
     signalMapper = new QSignalMapper (this) ;
     mainWindow();
+    Jugadores = new CircleList<Player*>;
 
 }
 
+//Ventana de Inicio
 void Control::mainWindow(){
     scene->clear();
     //Crea el boton Start
@@ -50,8 +52,9 @@ void Control::mainWindow(){
     QObject::connect(exitButton,SIGNAL(clicked()),this,SLOT(close()));
 }
 
+//Ventana para seleccionar el numero de Jugadores
 void Control::selectionWindow(){
-    Jugadores.clear();
+    Jugadores->clear();
     scene->clear();
     backButton= new Button("Back","BackEnter",100,480);
     scene->addItem(backButton);
@@ -86,11 +89,11 @@ void Control::setPlayersNum(int i){
     }else{
         SIZE_LIST = 7;
     }
-    qDebug() << TOTAL_PLAYERS;
     inputNames(1);
 }
 
 void Control::inputNames(int playerNum){
+
     scene->clear();
     nextButton= new Button("Next","NextEnter",580,480);
     scene->addItem(nextButton);
@@ -106,35 +109,37 @@ void Control::inputNames(int playerNum){
     playerNameBox->setGeometry(180,280,450,30);
     playerNameBox->setMaxLength(10);
     connect(playerNameBox, SIGNAL(textChanged(QString)), this, SLOT(changeName(QString))); //Conecta la senal del input a la funcion Change Name
-    connect (playerNameBox, SIGNAL(returnPressed()), signalMapper, SLOT(map())); //Conecta el Enter
     connect (nextButton, SIGNAL(clicked()), signalMapper, SLOT(map()),Qt::UniqueConnection); //Conecta el boton Next
     signalMapper -> setMapping (nextButton, playerNum);
     signalMapper -> setMapping (playerNameBox, playerNum);
     connect (signalMapper, SIGNAL(mapped(int)), this, SLOT(addPlayer(int)),Qt::UniqueConnection) ;
-    connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(addPlayer(int)),Qt::UniqueConnection);
     scene->addWidget(playerNameBox);
     playerNameBox->setFocus();
 }
 
 void Control::changeName(QString e){
     playerName = e;
-    qDebug()<< playerName;
-
 }
 
 void Control::addPlayer(int i){
     if (playerName!=""){
-        qDebug()<< QString("Nombre de Jugador: ")+ playerName;
         Player* Jugador = new Player();
         Jugador->setName(playerName.toStdString());
-        Jugador->setTurno(i);
-        Jugadores.gotoEnd();
-        Jugadores.insert(Jugador);
+        if (TOTAL_PLAYERS==4){
+            if (i>2){
+                Jugador->setTurno(i-2);
+            }else{
+                Jugador->setTurno(i);
+            }
+        }else{
+            Jugador->setTurno(i);
+        }
+        Jugadores->gotoEnd();
+        Jugadores->insert(Jugador);
         playerNameBox->clear();
         playerName.clear();
         if (i>=TOTAL_PLAYERS){
-            loadingScreen();
-
+            BoardType();
         }else{
             inputNames(i+1);
         }
@@ -143,24 +148,31 @@ void Control::addPlayer(int i){
         WarningMsg->setDefaultTextColor(Qt::white);
         WarningMsg->setPos(180,320);
         scene->addItem(WarningMsg);
-        /*
-         * Crea una pequena animacion con el Warning Message
-         *
-         * */
-        /*        QTimeLine *timer = new QTimeLine(5000);
-        timer->setFrameRange(0, 100);
-        QGraphicsItemAnimation *animation = new QGraphicsItemAnimation;
-        animation->setItem(WarningMsg);
-        animation->setTimeLine(timer);
-        srand((int) time(0));
-        for (int i = 0; i < 40; ++i){
-             animation->setPosAt(i/200.0, QPointF(rand() % 182 + 178,320));
-        }
-        scene->addItem(WarningMsg);
-        timer->start();*/
     }
 }
 
+void Control::BoardType(){
+    scene->clear();
+    backButton= new Button("Back","BackEnter",100,480);
+    scene->addItem(backButton);
+    QObject::connect(backButton,SIGNAL(clicked()),this,SLOT(selectionWindow()),Qt::UniqueConnection);
+
+    Button *randomButton= new Button("Random","RandomEnter",150,400);
+    scene->addItem(randomButton);
+    Button *defaultButton= new Button("Default","DefaultEnter",150,300);
+    scene->addItem(defaultButton);
+
+    connect (randomButton, SIGNAL(clicked()), signalMapper, SLOT(map()),Qt::UniqueConnection); //Conecta el boton Next
+    connect (defaultButton, SIGNAL(clicked()), signalMapper, SLOT(map()),Qt::UniqueConnection); //Conecta el boton Next
+    signalMapper -> setMapping (randomButton, 0);
+    signalMapper -> setMapping (defaultButton, 1);
+    connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(setBoard(int)),Qt::UniqueConnection);
+}
+
+void Control::setBoard(int i){
+    boardType=i;
+    loadingScreen();
+}
 void Control::loadingScreen(){
     scene->clear();
     QGraphicsTextItem* loadingText = new QGraphicsTextItem("Cargando...");
@@ -173,7 +185,7 @@ void Control::loadingScreen(){
 }
 
 void Control::startGame(){
-    Jugadores.gotoStart();
+    Jugadores->gotoStart();
     Game* board = new Game();
     this->close();
     board->show();

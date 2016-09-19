@@ -13,6 +13,9 @@ protected:
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
     void keyPressEvent(QKeyEvent *event);
+
+private:
+    QGraphicsTextItem* informationText ;
 signals:
     void endRound();
 };

@@ -13,10 +13,14 @@ public:
     int getRows();
     int getColumns();
     int getSize();
+    void random();
+    void swap(int i, int j, int swapI, int swapJ);
 
+public slots:
 protected:
    int rows;
    int columns;
+   int size;
    E** matrix;
 };
 

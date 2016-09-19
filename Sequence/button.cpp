@@ -53,6 +53,10 @@ void Button::hoverEnterEvent(QGraphicsSceneHoverEvent*){
     if (id=="4Players"){
         this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/4PlayersLeave.png"));
     }
+    if (id=="BackGame"){
+        this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/BackGame.png"));
+    }
+
 
 }
 
@@ -77,6 +81,9 @@ void Button::hoverLeaveEvent(QGraphicsSceneHoverEvent*){
     }
     if (id=="4Players"){
         this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/4PlayersEnter.png"));
+    }
+    if (id=="BackGame"){
+        this->setPixmap(QPixmap(":/Buttons/Resources/Buttons/BackGameLeave.png"));
     }
 
 }

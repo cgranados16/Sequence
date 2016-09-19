@@ -19,9 +19,10 @@ class Control : public QGraphicsView
 public:
     Control();
     QGraphicsScene* scene; // creo que debe ir private
-
+    void BoardType();
 
 private:
+
     Button* startButton;
     Button* exitButton;
     Button* nextButton;
@@ -33,6 +34,7 @@ private:
 signals:
     void enterPressed();
 public slots:
+    void setBoard(int i);
     void mainWindow();
     void selectionWindow();
     void inputNames(int playerNum);

@@ -17,8 +17,6 @@ public:
     Matriz<Card *> *randomBoard();
     ArrayStack<Card *>* getStack();
 
-    void swap(int pos, int swapPos);
-    void random(bool jacks = true);
 private:
     int id;
 

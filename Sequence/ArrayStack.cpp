@@ -2,7 +2,7 @@
 #include "Card.h"
 
 template<class E>
-ArrayStack<E>::ArrayStack(int tamano):ArrayList<E>(tamano){
+ArrayStack<E>::ArrayStack(int pMax):ArrayList<E>(pMax){
     this->top=0;
 }
 

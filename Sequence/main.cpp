@@ -9,10 +9,9 @@
 
 Control * game; // puntero al controlador
 
-CircleList<Player*> Jugadores;
+
 int SIZE_LIST;
 int TOTAL_PLAYERS;
-LinkedList<Card*> *Trash;
 CardButton* cartaJugador = NULL;
 CardButton* cartaTablero = NULL;
 
@@ -26,7 +25,7 @@ int main(int argc, char *argv[]){
     QApplication::setFont(myFont); //Escoge la fuente de texto predeterminada
 
     //PRUEBA PRUEBA PRUEBA PRUEBA PRUEBA PRUEBA
-    SIZE_LIST = 7;
+   /* SIZE_LIST = 7;
     Player* Jugador = new Player();
     Jugador->setName("Carlos");
     Jugador->setTurno(1);
@@ -38,19 +37,19 @@ int main(int argc, char *argv[]){
     Jugador2->setTurno(2);
     Jugadores.gotoEnd();
     Jugadores.insert(Jugador2);
-    TOTAL_PLAYERS = 2;
+    TOTAL_PLAYERS = 2;*/
 
     //END PRUEBA END PRUEBA END PRUEBAEND PRUEBA END PRUEBA
 
 
     // se va a programa
-    //game = new Control(); // se crea la instancia del juego
-    //game->show(); // muestra la escena con sus objetos
+    game = new Control(); // se crea la instancia del juego
+    game->show(); // muestra la escena con sus objetos
 
 
 
-    Game *board = new Game();
-    board->show();
+    //Game *board = new Game();
+    //board->show();
 
 
 

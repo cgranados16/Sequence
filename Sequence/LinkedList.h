@@ -3,11 +3,12 @@
 #include "Node.h"
 #include "Player.h"
 #include "cardbutton.h"
+#include "MyQGraphicsScene.h"
+//#include "game.h"
 #include <cstddef>
 using namespace std;
 
 template<typename E>
-
 class LinkedList{
     protected:
         Node<E>* first;

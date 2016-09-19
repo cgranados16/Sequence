@@ -1,7 +1,8 @@
 #include "Matriz.h"
+
+#include <QDebug>
+
 template <typename E>
-
-
 Matriz<E>::Matriz(int rows, int columns){
        this->rows = rows;
        this->columns = columns;
@@ -9,6 +10,7 @@ Matriz<E>::Matriz(int rows, int columns){
        for (int i = 0; i < rows; i++) {
            matrix[i] = new E[columns];
        }
+       this->size = rows*columns;
    }
 
 
@@ -37,7 +39,34 @@ int Matriz<E>::getColumns() {
 
 template <typename E>
 int Matriz<E>::getSize() {
-   return rows*columns;
+    return rows*columns;
+}
+
+template <typename E>
+void Matriz<E>::swap(int i,int j, int swapI, int swapJ){
+    E temp = matrix[i][j];
+    matrix[i][j]=matrix[swapI][swapJ];
+    matrix[swapI][swapJ]=temp;
+}
+
+template <typename E>
+void Matriz<E>::random(){
+    srand((int) time(0));
+    for (int i=0;i<rows;i++){
+        for (int c=0;c<columns;c++){
+            if((i!=0&&c!=0) && (i!=0&&c!=9) &&
+                (i!=9&&c!=0) && (i!=9&&c!=9)){
+                int randomI = (rand() % rows);
+                int randomC = (rand() % columns);
+                while ((randomI==0&&randomC==0) || (randomI==0&&randomC==9) ||
+                       (randomI==9&&randomC==0) || (randomI==9&&randomC==9)){
+                    randomI = (rand() % rows);
+                    randomC = (rand() % columns);
+                }
+                swap(i,c,randomI,randomC);
+            }
+        }
+    }
 }
 
 

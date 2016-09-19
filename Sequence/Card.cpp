@@ -25,6 +25,19 @@ int Card::getValue(){
     return value;
 }
 
+void Card::setMatrixPos(int row, int col){
+    this->row = row;
+    this->col = col;
+}
+
+int Card::getRow(){
+    return row;
+}
+
+int Card::getCol(){
+    return col;
+}
+
 void Card::setValue(int value){
     if (0>value && value<13){
         throw runtime_error("Entrada invalida");
@@ -73,12 +86,17 @@ void Card::setToken(Token* token){
 }
 
 bool Card::hasToken(){
-    if (token!=NULL){
+    if (token){
         return true;
     }else{
         return false;
     }
 }
+
+Token *Card::getToken(){
+    return token;
+}
+
 
 void Card::setSide(int side){
     this->side = side;

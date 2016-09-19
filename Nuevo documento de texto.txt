@@ -1,17 +1,87 @@
 
-	H	S	D	C
-A	0	13	26	39
-2	1	14	27	40
-3	2	15	28	41
-4	3	16	29	42
-5	4	17	30	43
-6	5	18	31	44
-7	6	19	32	45
-8	7	20	33	46
-9	8	21	34	47
-10	9	22	35	48
-J	10	23	36	49
-Q	11	24	37	50
-K	12	25	38	51
+		S	D	C
+A	39
+2	40
+3	41
+4	42
+5	43
+6	44
+7	45
+8	46
+9	47
+10	48
+J	49
+Q	50
+K	51
 
-10SPADES ES 10CLUBS
+
+
+		D	C
+A	91
+2	92
+3	93
+4	94
+5	95
+6	96
+7	97
+8	98
+9	99
+10	100
+J	101
+Q	102
+K	103
+
+
+
+"AHearts53"
+"2Hearts54"
+"3Hearts55"
+"4Hearts56"
+"5Hearts57"
+"6Hearts58"
+"7Hearts59"
+"8Hearts60"
+"9Hearts61"
+"10Hearts62"
+"JHearts63"
+"QHearts64"
+"KHearts65"
+"ASpades66"
+"2Spades67"
+"3Spades68"
+"4Spades69"
+"5Spades70"
+"6Spades71"
+"7Spades72"
+"8Spades73"
+"9Spades74"
+"10Spades75"
+"JSpades76"
+"QSpades77"
+"KSpades78"
+"ADiamonds79"
+"2Diamonds80"
+"3Diamonds81"
+"4Diamonds82"
+"5Diamonds83"
+"6Diamonds84"
+"7Diamonds85"
+"8Diamonds86"
+"9Diamonds87"
+"10Diamonds88"
+"JDiamonds89"
+"QDiamonds90"
+"KDiamonds91"
+"AClubs92"
+"2Clubs93"
+"3Clubs94"
+"4Clubs95"
+"5Clubs96"
+"6Clubs97"
+"7Clubs98"
+"8Clubs99"
+"9Clubs100"
+"10Clubs101"
+"JClubs102"
+"QClubs103"
+"KClubs104"

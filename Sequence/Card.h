@@ -27,7 +27,10 @@ class Card
         Player* getPlayer();
         void setToken(Token *token);
         bool hasToken();
-
+        Token *getToken();
+        void setMatrixPos(int row, int col);
+        int getRow();
+        int getCol();
 protected:
 
     private:
@@ -37,6 +40,8 @@ protected:
         Player* player;
         int side; //Lado de la Carta 0 = Frente, 1 = volteada
         Token* token;
+        int row;
+        int col;
 };
 
 #endif // CARD_H

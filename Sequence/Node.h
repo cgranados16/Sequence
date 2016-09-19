@@ -5,6 +5,8 @@
 //Templates
 #include "Player.h"
 #include "cardbutton.h"
+#include "MyQGraphicsScene.h"
+//#include "game.h"
 //=======================
 using namespace std;
 template<typename E>

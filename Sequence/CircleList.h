@@ -1,8 +1,8 @@
 #ifndef CIRCLELIST_H
 #define CIRCLELIST_H
 #include "LinkedList.h"
-template<typename E>
 
+template<class E>
 class CircleList:public LinkedList<E>{
     public:
         CircleList();

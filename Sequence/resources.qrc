@@ -14,13 +14,17 @@
         <file>Resources/Buttons/NextLeave.png</file>
         <file>Resources/Buttons/StartEnter.png</file>
         <file>Resources/Buttons/StartLeave.png</file>
-        <file>Resources/boardBackground.jpg</file>
+        <file>Resources/Buttons/BackGame.png</file>
+        <file>Resources/Buttons/BackGameLeave.png</file>
+        <file>Resources/Buttons/DefaultEnter.png</file>
+        <file>Resources/Buttons/DefaultLeave.png</file>
+        <file>Resources/Buttons/RandomEnter.png</file>
+        <file>Resources/Buttons/RandomLeave.png</file>
     </qresource>
     <qresource prefix="/Resources">
         <file>Resources/Background.png</file>
         <file>Resources/Fonts/press_start_2p/PressStart2P.ttf</file>
-        <file>Resources/BoardBackground.jpg</file>
-        <file>Resources/BoardBackground2.jpg</file>
+        <file>Resources/GameBackground.png</file>
     </qresource>
     <qresource prefix="/Cards">
         <file>Resources/Cards/2Clubs.png</file>

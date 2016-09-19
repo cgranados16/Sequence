@@ -26,6 +26,8 @@ class ArrayList
         virtual ~ArrayList();
         void insertionSort();     
         void clear();
+        void swap(int pos, int swapPos);
+        void random();
 protected:
         int size;
         int max;

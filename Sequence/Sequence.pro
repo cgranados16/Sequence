@@ -29,7 +29,8 @@ SOURCES += main.cpp \
     CardDeck.cpp \
     MyQGraphicsScene.cpp \
     Matriz.cpp \
-    Token.cpp
+    Token.cpp \
+    LinkedStack.cpp
 
 HEADERS  += \
     ArrayList.h \
@@ -46,7 +47,8 @@ HEADERS  += \
     CardDeck.h \
     MyQGraphicsScene.h \
     Matriz.h \
-    Token.h
+    Token.h \
+    LinkedStack.h
 
 RESOURCES += \
     resources.qrc

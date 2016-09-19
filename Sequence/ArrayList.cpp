@@ -111,6 +111,22 @@ void ArrayList<E>::clear(){
 }
 
 template<typename E>
+void ArrayList<E>::swap(int pos, int swapPos){
+    E temp = elements[pos];
+    elements[pos]=elements[swapPos];
+    elements[swapPos]=temp;
+}
+
+template<typename E>
+void ArrayList<E>::random(){
+    srand((int) time(0));
+    for (int i=0;i<size;i++){
+        int random = (rand() % size);
+        swap(i,random);
+    }
+}
+
+template<typename E>
 ArrayList<E>::~ArrayList(){
     //destructor
     size=0;
