@@ -108,7 +108,7 @@ Game::Game()
 void Game::nextPlayer(){
     scene->removeItem(stringTurno);
     scene->removeItem(stringRound);
-    if (TOTAL_PLAYERS=4){
+    if (TOTAL_PLAYERS==4){
         scene->removeItem(stringTeam);
     }
     if(secuenciaFilas() || secuenciaColumna() || secuenciaDiagonales()){
